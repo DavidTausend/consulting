@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>My Bookings</h2>
+<ul>
+    {% for booking in bookings %}
+        <li>{{ booking.consultant }} - {{ booking.date }} {{ booking.time }} - {{ booking.status }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
