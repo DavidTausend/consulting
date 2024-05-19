@@ -140,4 +140,5 @@ LOGOUT_REDIRECT_URL = 'accounts:login'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
+    "https://*.herokuapp.com",
 ]
