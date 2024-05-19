@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Contact Us</h2>
+<p>For inquiries or more information, please contact us through the form below.</p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send Inquiry</button>
+</form>
+{% endblock %}

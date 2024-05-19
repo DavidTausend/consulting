@@ -3,9 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Booking, Consultant
-from .forms import BookingForm
-
+from .models import Booking, Consultant, Inquiry
+from .forms import BookingForm, InquiryForm
 
 # Create your views here.
 
@@ -61,3 +60,18 @@ def consultant_list(request):
 def consultant_profile(request, consultant_id):
     consultant = get_object_or_404(Consultant, id=consultant_id)
     return render(request, 'accounts/consultant_profile.html', {'consultant': consultant})
+
+# Contact Information and Inquiry Form
+
+def contact(request):
+    if request.method == 'POST':
+        form = InquiryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:contact_confirmation')
+    else:
+        form = InquiryForm()
+    return render(request, 'accounts/contact.html', {'form': form})
+
+def contact_confirmation(request):
+    return render(request, 'accounts/contact_confirmation.html')

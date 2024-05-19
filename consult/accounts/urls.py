@@ -14,5 +14,7 @@ urlpatterns = [
     path('bookings/', views.booking_list, name='booking_list'),
     path('consultants/', views.consultant_list, name='consultant_list'),
     path('consultants/<int:consultant_id>/', views.consultant_profile, name='consultant_profile'),
+    path('contact/', views.contact, name='contact'),
+    path('contact_confirmation/', views.contact_confirmation, name='contact_confirmation'),
     path('', views.home, name='home'),
 ]
