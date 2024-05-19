@@ -1,12 +1,15 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Booking
+from .models import Booking, Consultant
 from .forms import BookingForm
 
+
 # Create your views here.
+
+# Register to the website
 
 def register(request):
     if request.method == 'POST':
@@ -18,8 +21,13 @@ def register(request):
         form = UserCreationForm()
     return render(request, 'accounts/register.html', {'form': form})
 
+# Home page
+
 def home(request):
     return render(request, 'accounts/home.html')
+
+
+# Create booking
 
 @login_required
 def create_booking(request):
@@ -37,7 +45,19 @@ def create_booking(request):
         form = BookingForm()
     return render(request, 'accounts/create_booking.html', {'form': form})
 
+# Booking list
+
 @login_required
 def booking_list(request):
     bookings = Booking.objects.filter(client=request.user)
     return render(request, 'accounts/booking_list.html', {'bookings': bookings})
+
+# Consultant Profiles
+
+def consultant_list(request):
+    consultants = Consultant.objects.all()
+    return render(request, 'accounts/consultant_list.html', {'consultants': consultants})
+
+def consultant_profile(request, consultant_id):
+    consultant = get_object_or_404(Consultant, id=consultant_id)
+    return render(request, 'accounts/consultant_profile.html', {'consultant': consultant})

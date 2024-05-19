@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Consultants</h2>
+<ul>
+    {% for consultant in consultants %}
+        <li>
+            <a href="{% url 'accounts:consultant_profile' consultant.id %}">
+                {{ consultant.name }} - {{ consultant.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

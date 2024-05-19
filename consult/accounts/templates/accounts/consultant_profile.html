@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>{{ consultant.name }}</h2>
+<img src="{{ consultant.profile_picture.url }}" alt="{{ consultant.name }}" style="max-width: 200px; max-height: 200px;">
+<p><strong>Title:</strong> {{ consultant.title }}</p>
+<p><strong>Specialties:</strong> {{ consultant.specialties }}</p>
+<p>{{ consultant.bio }}</p>
+{% endblock %}
