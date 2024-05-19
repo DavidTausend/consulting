@@ -6,6 +6,10 @@ python manage.py makemigrations
 python manage.py migrate
 
 
+python3 manage.py runserver
+
+python manage.py add_consultants
+
 Register
 accounts/register/
 
