@@ -16,5 +16,6 @@ urlpatterns = [
     path('consultants/<int:consultant_id>/', views.consultant_profile, name='consultant_profile'),
     path('contact/', views.contact, name='contact'),
     path('contact_confirmation/', views.contact_confirmation, name='contact_confirmation'),
+    path('consultations/', views.consultation_list, name='consultation_list'),
     path('', views.home, name='home'),
 ]

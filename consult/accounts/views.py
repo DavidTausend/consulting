@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import Booking, Consultant, Inquiry
-from .forms import BookingForm, InquiryForm
+from .forms import BookingForm, InquiryForm, SearchForm, FilterForm
 
 # Create your views here.
 
@@ -75,3 +75,29 @@ def contact(request):
 
 def contact_confirmation(request):
     return render(request, 'accounts/contact_confirmation.html')
+
+#  Search and Filter Requests
+
+def consultation_list(request):
+    bookings = Booking.objects.all()
+    search_form = SearchForm(request.GET)
+    filter_form = FilterForm(request.GET)
+
+    if search_form.is_valid():
+        consultant_name = search_form.cleaned_data.get('consultant_name')
+        if consultant_name:
+            bookings = bookings.filter(consultant__name__icontains=consultant_name)
+
+    if filter_form.is_valid():
+        date = filter_form.cleaned_data.get('date')
+        specialty = filter_form.cleaned_data.get('specialty')
+        if date:
+            bookings = bookings.filter(date=date)
+        if specialty:
+            bookings = bookings.filter(consultant__specialties__icontains=specialty)
+
+    return render(request, 'accounts/consultation_list.html', {
+        'bookings': bookings,
+        'search_form': search_form,
+        'filter_form': filter_form,
+    })

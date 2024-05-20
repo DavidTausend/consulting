@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Consultations</h2>
+<form method="get">
+    {{ search_form.as_p }}
+    {{ filter_form.as_p }}
+    <button type="submit">Search and Filter</button>
+</form>
+<ul>
+    {% for booking in bookings %}
+        <li>{{ booking.consultant.name }} - {{ booking.date }} - {{ booking.time }} - {{ booking.consultant.specialties }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
