@@ -4,7 +4,8 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import Booking, Consultant, Inquiry
-from .forms import BookingForm, InquiryForm, SearchForm, FilterForm
+from .forms import BookingForm, InquiryForm, SearchForm, FilterForm, BookingStatusForm
+from django.contrib.admin.views.decorators import staff_member_required
 
 # Create your views here.
 
@@ -101,3 +102,22 @@ def consultation_list(request):
         'search_form': search_form,
         'filter_form': filter_form,
     })
+
+# Admin Views for Bookings Management
+
+@staff_member_required
+def admin_dashboard(request):
+    bookings = Booking.objects.all()
+    return render(request, 'accounts/admin_dashboard.html', {'bookings': bookings})
+
+@staff_member_required
+def update_booking_status(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        form = BookingStatusForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:admin_dashboard')
+    else:
+        form = BookingStatusForm(instance=booking)
+    return render(request, 'accounts/update_booking_status.html', {'form': form, 'booking': booking})

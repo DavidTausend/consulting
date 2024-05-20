@@ -17,5 +17,11 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('contact_confirmation/', views.contact_confirmation, name='contact_confirmation'),
     path('consultations/', views.consultation_list, name='consultation_list'),
+    # Payments (if I have time, could be implemented in the future)
+    # path('payment/<int:booking_id>/', views.payment, name='payment'),
+    # path('payment_confirmation/', views.payment_confirmation, name='payment_confirmation'),
+    # Admin Dashboard
+    path('admin_dashboard/', views.admin_dashboard, name='admin_dashboard'),
+    path('update_booking_status/<int:booking_id>/', views.update_booking_status, name='update_booking_status'),
     path('', views.home, name='home'),
 ]

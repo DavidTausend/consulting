@@ -20,3 +20,10 @@ class SearchForm(forms.Form):
 class FilterForm(forms.Form):
     date = forms.DateField(required=False, widget=forms.TextInput(attrs={'type': 'date'}))
     specialty = forms.ModelChoiceField(queryset=Consultant.objects.values_list('specialties', flat=True).distinct(), required=False)
+
+# Booking Status Form
+
+class BookingStatusForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['status']
