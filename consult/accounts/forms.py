@@ -1,5 +1,5 @@
 from django import forms
-from .models import Booking, Inquiry, Consultant
+from .models import Booking, Inquiry, Consultant, Review
 
 class BookingForm(forms.ModelForm):
     class Meta:
@@ -27,3 +27,10 @@ class BookingStatusForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['status']
+
+# User Reviews and Feedback System
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'comments']

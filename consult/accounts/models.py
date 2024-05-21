@@ -31,3 +31,16 @@ class Inquiry(models.Model):
 
     def __str__(self):
         return f"Inquiry from {self.name} - {self.email}"
+
+# User Reviews and Feedback System
+
+class Review(models.Model):
+    consultant = models.ForeignKey(Consultant, on_delete=models.CASCADE, related_name='reviews')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+    comments = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Review by {self.user.username} for {self.consultant.name}"
