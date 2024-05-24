@@ -26,7 +26,6 @@ def register(request):
 def home(request):
     return render(request, 'accounts/home.html')
 
-
 # Create booking
 
 @login_required
