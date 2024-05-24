@@ -1,0 +1,18 @@
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+.jumbotron-heading {
+    font-weight: 300;
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
