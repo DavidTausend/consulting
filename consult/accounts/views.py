@@ -164,3 +164,6 @@ def view_reviews(request, consultant_id):
     consultant = get_object_or_404(Consultant, id=consultant_id)
     reviews = Review.objects.filter(consultant=consultant)
     return render(request, 'accounts/view_reviews.html', {'reviews': reviews, 'consultant': consultant})
+
+def portfolio_list(request):
+    return render(request, 'accounts/portfolio_list.html')
