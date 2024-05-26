@@ -130,3 +130,15 @@ a:hover {
     margin: 0 auto 15px;
     display: block;
 }
+
+.mt-auto {
+    margin-top: auto !important;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mt-auto a {
+    color: #fff;
+    font-size: 1.5rem;
+}
