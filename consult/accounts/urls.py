@@ -27,7 +27,6 @@ urlpatterns = [
     # Admin Dashboard
     path('admin_dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('update_booking_status/<int:booking_id>/', views.update_booking_status, name='update_booking_status'),
-    # portfolio
     path('portfolio/', views.portfolio_list, name='portfolio_list'),
     path('', views.home, name='home'),
 ]
