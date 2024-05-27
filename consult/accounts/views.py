@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Booking, Consultant, Inquiry, Review
+from .models import Booking, Consultant, Inquiry, Review, Portfolio
 from .forms import BookingForm, InquiryForm, SearchForm, FilterForm, BookingStatusForm, ReviewForm
 from django.contrib.admin.views.decorators import staff_member_required
 
@@ -166,4 +166,5 @@ def view_reviews(request, consultant_id):
     return render(request, 'accounts/view_reviews.html', {'reviews': reviews, 'consultant': consultant})
 
 def portfolio_list(request):
-    return render(request, 'accounts/portfolio_list.html')
+    portfolios = Portfolio.objects.all()
+    return render(request, 'accounts/portfolio_list.html', {'portfolios': portfolios})

@@ -44,3 +44,12 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review by {self.user.username} for {self.consultant.name}"
+
+class Portfolio(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    image = models.ImageField(upload_to='portfolio_images/')
+    client_testimonial = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title

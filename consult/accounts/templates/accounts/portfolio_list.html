@@ -1,8 +1,19 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<div class="container">
-    <h1 class="mt-4">Portfolio</h1>
-    <p>This is a mockup for the portfolio section. Future projects and case studies will be displayed here.</p>
+<h1>Our Portfolio</h1>
+<div class="portfolio-gallery">
+    {% for portfolio in portfolios %}
+    <div class="portfolio-item">
+        <img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" class="img-fluid">
+        <h2>{{ portfolio.title }}</h2>
+        <p>{{ portfolio.description }}</p>
+        {% if portfolio.client_testimonial %}
+        <blockquote>
+            <p>"{{ portfolio.client_testimonial }}"</p>
+        </blockquote>
+        {% endif %}
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
