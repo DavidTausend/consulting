@@ -39,7 +39,7 @@ class Command(BaseCommand):
             {
                 "title": "Consulting",
                 "description": "A comprehensive consulting service tailored to meet client needs.",
-                "image": "static/portfolio/enigma_machine.webp",
+                "image": "static/portfolio/implement_future.webp",
                 "client_testimonial": "Exceptional consulting services that provided great insights and solutions."
             },
             {
