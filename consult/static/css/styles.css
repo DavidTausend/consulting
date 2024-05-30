@@ -151,7 +151,7 @@ a:hover {
 }
 
 .portfolio-item {
-    background-color: #2B2D42;
+    background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     width: calc(33.333% - 20px);
@@ -175,7 +175,7 @@ a:hover {
 
 .portfolio-item blockquote {
     font-size: 0.875rem;
-    color: #adb5bd;
-    border-left: 4px solid #4E54C8;
+    color: #000;
+    border-left: 4px solid #000;
     padding-left: 10px;
 }
