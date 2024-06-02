@@ -33,13 +33,18 @@ class Command(BaseCommand):
             },
             {
                 "title": "HashiCorp Certified: Terraform Associate (003)",
-                "description": "",
+                "description": "Issued Oct 2023 - Expires Oct 2025",
                 "image": "images/certificates/terraform_associate.webp"
             },
             {
                 "title": "Terraform Beginner Bootcamp (Terraformer)",
-                "description": "",
+                "description": "Credential ID Pmi6FzvAMpCy60qtyomtkg11572 - Issued Oct 2023",
                 "image": "images/certificates/terraform_bootcamp.webp"
+            },
+            {
+                "title": "Code Challenge",
+                "description": "Code Institute Code Cahllenge",
+                "image": "images/certificates/full_stack_developer.webp"
             },
             {
                 "title": "Full Stack Developer",
