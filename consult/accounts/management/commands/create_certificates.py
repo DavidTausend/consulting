@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand
 from accounts.models import Certificate
+from datetime import date
 
 class Command(BaseCommand):
     help = 'Create certificate items'
@@ -8,64 +9,75 @@ class Command(BaseCommand):
         certificates = [
             {
                 "title": "AWS Certified Cloud Practitioner",
-                "description": "Amazon Web Services (AWS) - Issued Mar 2023 - Expires Mar 2026",
-                "image": "images/certificates/aws_cloud_practitioner.webp"
+                "description": "Amazon Web Services (AWS)",
+                "image": "images/certificates/aws_cloud_practitioner.webp",
+                "date_of_issuance": date(2023, 3, 1)
             },
             {
                 "title": "AWS Certified Solutions Architect – Associate",
-                "description": "Amazon Web Services (AWS) - Issued Jun 2023 - Expires Jun 2026",
-                "image": "images/certificates/aws_solutions_architect_associate.webp"
+                "description": "Amazon Web Services (AWS)",
+                "image": "images/certificates/aws_solutions_architect_associate.webp",
+                "date_of_issuance": date(2023, 6, 1)
             },
             {
                 "title": "AWS Certified Developer – Associate",
-                "description": "Amazon Web Services (AWS) - Issued Jul 2023 - Expires Jul 2026",
-                "image": "images/certificates/aws_developer_associate.webp"
+                "description": "Amazon Web Services (AWS)",
+                "image": "images/certificates/aws_developer_associate.webp",
+                "date_of_issuance": date(2023, 7, 1)
             },
             {
                 "title": "AWS Certified SysOps Administrator – Associate",
-                "description": "Amazon Web Services (AWS) - Issued Aug 2023 - Expires Aug 2026",
-                "image": "images/certificates/aws_sysops_administrator.webp"
+                "description": "Amazon Web Services (AWS)",
+                "image": "images/certificates/aws_sysops_administrator.webp",
+                "date_of_issuance": date(2023, 8, 1)
             },
             {
                 "title": "AWS Cloud Project Bootcamp Certificate (Gold Squad)",
-                "description": "Credential ID iEM3yK4sJYqg7g_WCBjoew11572 - Issued Aug 2023 - Expires Aug 2026",
-                "image": "images/certificates/aws_cloud_project_bootcamp.webp"
+                "description": "ExamPro",
+                "image": "images/certificates/aws_cloud_project_bootcamp.webp",
+                "date_of_issuance": date(2023, 8, 1)
             },
             {
                 "title": "HashiCorp Certified: Terraform Associate (003)",
-                "description": "Issued Oct 2023 - Expires Oct 2025",
-                "image": "images/certificates/terraform_associate.webp"
+                "description": "HashiCorp",
+                "image": "images/certificates/terraform_associate.webp",
+                "date_of_issuance": date(2023, 10, 1)
             },
             {
                 "title": "Terraform Beginner Bootcamp (Terraformer)",
-                "description": "Credential ID Pmi6FzvAMpCy60qtyomtkg11572 - Issued Oct 2023",
-                "image": "images/certificates/terraform_bootcamp.webp"
+                "description": "ExamPro",
+                "image": "images/certificates/terraform_bootcamp.webp",
+                "date_of_issuance": date(2023, 10, 1)
             },
             {
                 "title": "Code Challenge",
-                "description": "Code Institute Code Cahllenge",
-                "image": "images/certificates/full_stack_developer.webp"
+                "description": "Code Institute Code Challenge",
+                "image": "images/certificates/full_stack_developer.webp",
+                "date_of_issuance": date.today()
             },
             {
                 "title": "Full Stack Developer",
                 "description": "Coming soon - Full Stack Developer Certificate",
-                "image": "images/certificates/full_stack_developer.webp"
+                "image": "images/certificates/full_stack_developer.webp",
+                "date_of_issuance": date.today()
             },
             {
                 "title": "Cloud Digital Leader",
                 "description": "Coming soon - Cloud Digital Leader Certificate",
                 "image": "images/certificates/cloud_digital_leader.webp",
+                "date_of_issuance": date.today()
             },
             {
                 "title": "Cloud Engineer",
                 "description": "Coming soon - Cloud Engineer Certificate",
                 "image": "images/certificates/cloud_engineer.webp",
+                "date_of_issuance": date.today()
             }
         ]
 
         for certificate_data in certificates:
             certificate, created = Certificate.objects.get_or_create(**certificate_data)
             if created:
-                self.stdout.write(self.style.SUCCESS(f'Certificate "{certificate["title"]}" created successfully.'))
+                self.stdout.write(self.style.SUCCESS(f'Certificate "{certificate_data["title"]}" created successfully.'))
             else:
-                self.stdout.write(self.style.WARNING(f'Certificate "{certificate["title"]}" already exists.'))
+                self.stdout.write(self.style.WARNING(f'Certificate "{certificate_data["title"]}" already exists.'))
