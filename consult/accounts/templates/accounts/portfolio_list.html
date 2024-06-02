@@ -1,19 +1,28 @@
 {% extends "base_generic.html" %}
+{% load static %}
+
+{% block title %}Our Portfolio{% endblock %}
 
 {% block content %}
 <h1>Our Portfolio</h1>
-<div class="portfolio-gallery">
-    {% for portfolio in portfolios %}
-    <div class="portfolio-item">
-        <img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" class="img-fluid">
-        <h2>{{ portfolio.title }}</h2>
-        <p>{{ portfolio.description }}</p>
-        {% if portfolio.client_testimonial %}
-        <blockquote>
-            <p>"{{ portfolio.client_testimonial }}"</p>
-        </blockquote>
-        {% endif %}
+<div class="portfolio-gallery container">
+    <div class="row">
+        {% for portfolio in portfolios %}
+        <div class="col-md-4 portfolio-item mb-4">
+            <div class="card">
+                <img src="{% static portfolio.image %}" alt="{{ portfolio.title }}" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">{{ portfolio.title }}</h5>
+                    <p class="card-text">{{ portfolio.description }}</p>
+                    {% if portfolio.client_testimonial %}
+                    <blockquote class="blockquote">
+                        <p class="mb-0">"{{ portfolio.client_testimonial }}"</p>
+                    </blockquote>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}

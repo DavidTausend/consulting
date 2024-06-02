@@ -10,43 +10,43 @@ class Command(BaseCommand):
             {
                 "title": "Cruddur",
                 "description": "Developed a Twitter application using AWS as the main cloud provider.",
-                "image": "portfolio/cruddur.webp",
+                "image": "images/portfolio/cruddur.webp",
                 "client_testimonial": "This project significantly improved our operational efficiency and scalability."
             },
             {
                 "title": "Terrahouses",
                 "description": "Developed an application where users can upload and share websites.",
-                "image": "portfolio/terrahouse.webp",
+                "image": "images/portfolio/terrahouse.webp",
                 "client_testimonial": "The platform has been a game-changer for our content-sharing needs."
             },
             {
                 "title": "Tausendlin",
                 "description": "An imaginative journey through Tausendlin, offering vibrant and diverse experiences.",
-                "image": "portfolio/tausendlin.webp",
+                "image": "images/portfolio/tausendlin.webp",
                 "client_testimonial": "A unique and engaging platform that showcases the best of our city."
             },
             {
-                "title": "pokemon-memory-cards-game",
+                "title": "Pokemon Memory Cards Game",
                 "description": "A fun and challenging Pokémon Memory Card Game for all ages with vibrant graphics.",
-                "image": "portfolio/pokemon.webp",
+                "image": "images/portfolio/pokemon.webp",
                 "client_testimonial": "An exciting game that keeps both kids and adults entertained for hours."
             },
             {
                 "title": "Enigma",
                 "description": "A thrilling game where you decode messages and solve puzzles using the Enigma machine.",
-                "image": "portfolio/enigma_machine.webp",
+                "image": "images/portfolio/enigma_machine.webp",
                 "client_testimonial": "A captivating blend of logic, deduction, and historical intrigue."
             },
             {
                 "title": "Consulting",
                 "description": "A comprehensive consulting service tailored to meet client needs.",
-                "image": "portfolio/implement_future.webp",
+                "image": "images/portfolio/consulting.webp",
                 "client_testimonial": "Exceptional consulting services that provided great insights and solutions."
             },
             {
                 "title": "Predictive Analytics",
                 "description": "Coming soon.",
-                "image": "portfolio/predictive_analytics.webp",
+                "image": "images/portfolio/predictive_analytics.webp",
                 "client_testimonial": ""
             }
         ]
