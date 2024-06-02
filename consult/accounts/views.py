@@ -168,3 +168,7 @@ def view_reviews(request, consultant_id):
 def portfolio_list(request):
     portfolios = Portfolio.objects.all()
     return render(request, 'accounts/portfolio_list.html', {'portfolios': portfolios})
+
+def certificate_list(request):
+    certificates = Certificate.objects.all()
+    return render(request, 'accounts/certificate_list.html', {'certificates': certificates})

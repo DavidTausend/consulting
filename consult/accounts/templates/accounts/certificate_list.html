@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block title %}Our Certificates{% endblock %}
+
+{% block content %}
+<h1>Our Certificates</h1>
+<div class="certificate-gallery container">
+    <div class="row">
+        {% for certificate in certificates %}
+        <div class="col-md-4 certificate-item mb-4">
+            <div class="card">
+                <img src="{% static certificate.image %}" alt="{{ certificate.title }}" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title">{{ certificate.title }}</h5>
+                    <p class="card-text">{{ certificate.description }}</p>
+                    <p class="card-text"><small class="text-muted">Issued on: {{ certificate.date_of_issuance }}</small></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

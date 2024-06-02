@@ -185,3 +185,38 @@ a:hover {
     font-size: 0.875rem;
     color: #adb5bd;
 }
+
+/* Certificates */
+.certificate-gallery {
+    margin-top: 20px;
+}
+
+.certificate-item {
+    text-align: center;
+}
+
+.card {
+    background-color: #2B2D42;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    color: #fff;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+}
