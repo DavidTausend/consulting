@@ -52,7 +52,7 @@ class Command(BaseCommand):
             {
                 "title": "Code Challenge",
                 "description": "Code Institute Code Challenge",
-                "image": "images/certificates/full_stack_developer.webp",
+                "image": "images/certificates/code_challenge.webp",
                 "date_of_issuance": date.today()
             },
             {

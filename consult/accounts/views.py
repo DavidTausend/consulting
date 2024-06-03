@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from .models import Booking, Consultant, Inquiry, Review, Portfolio
+from .models import Booking, Consultant, Inquiry, Review, Portfolio, Certificate
 from .forms import BookingForm, InquiryForm, SearchForm, FilterForm, BookingStatusForm, ReviewForm
 from django.contrib.admin.views.decorators import staff_member_required
 
