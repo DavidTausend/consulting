@@ -172,3 +172,9 @@ def portfolio_list(request):
 def certificate_list(request):
     certificates = Certificate.objects.all()
     return render(request, 'accounts/certificate_list.html', {'certificates': certificates})
+
+def about_me(request):
+    about_me_content = {
+        "bio": "I'm a passionate Cloud Engineer and Programmer with a deep affection for felines and a knack for mending computers. I find immense joy in crafting intricate lines of code and architecting cloud solutions that shape the digital world. When I'm not immersed in the realm of technology, you'll often find me in the company of my beloved cats, drawing inspiration from their curiosity and playfulness. My fascination with computers extends beyond the virtual, as I also thrive on the hands-on experience of diagnosing and repairing hardware. With every project and every computer I fix, I'm driven by a desire to create and innovate, both in the world of programming and in the day-to-day interactions with the technology we rely on. Welcome to my portfolio, where these passions come to life."
+    }
+    return render(request, 'accounts/about_me.html', about_me_content)
