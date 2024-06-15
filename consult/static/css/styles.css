@@ -225,34 +225,23 @@ a:hover {
 /* Small screens (480px and down) */
 @media only screen and (max-width: 480px) {
     #sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: 60px;
     }
 
     #main-content {
-        margin-left: 0;
-        width: 100%;
+        margin-left: 60px;
+        width: calc(100% - 60px);
     }
 
     .navbar-toggler {
         display: block;
-        border: none;
-        background: none;
-        color: #fff;
-        font-size: 1.5rem;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
     }
 
-    .navbar-toggler.collapsed + .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .navbar-brand,
-    .profile-pic,
-    .navbar-brand h3,
-    .navbar-brand p {
+    .navbar-brand, .nav-text {
         display: none;
     }
 
@@ -268,34 +257,23 @@ a:hover {
 /* Medium screens (481px to 768px) */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     #sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: 60px;
     }
 
     #main-content {
-        margin-left: 0;
-        width: 100%;
+        margin-left: 60px;
+        width: calc(100% - 60px);
     }
 
     .navbar-toggler {
         display: block;
-        border: none;
-        background: none;
-        color: #fff;
-        font-size: 1.5rem;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
     }
 
-    .navbar-toggler.collapsed + .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .navbar-brand,
-    .profile-pic,
-    .navbar-brand h3,
-    .navbar-brand p {
+    .navbar-brand, .nav-text {
         display: none;
     }
 
@@ -324,4 +302,9 @@ a:hover {
     .navbar-toggler {
         display: none;
     }
+}
+
+.collapsed {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
 }
