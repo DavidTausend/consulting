@@ -1,10 +1,20 @@
 from django import forms
 from .models import Booking, Inquiry, Consultant, Review
+from django.utils import timezone
+from django.core.exceptions import ValidationError
 
 class BookingForm(forms.ModelForm):
+    date = forms.DateField(input_formats=['%m-%d-%Y'])
+
     class Meta:
         model = Booking
         fields = ['consultant', 'date', 'time']
+
+    def clean_date(self):
+        date = self.cleaned_data['date']
+        if date < timezone.now().date():
+            raise ValidationError("The date cannot be in the past.")
+        return date
 
 class InquiryForm(forms.ModelForm):
     class Meta:

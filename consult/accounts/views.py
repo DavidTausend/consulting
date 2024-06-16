@@ -30,6 +30,7 @@ def home(request):
 
 @login_required
 def create_booking(request):
+    consultants = Consultant.objects.all()
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -42,7 +43,7 @@ def create_booking(request):
                 form.add_error(None, 'This slot is already booked.')
     else:
         form = BookingForm()
-    return render(request, 'accounts/create_booking.html', {'form': form})
+    return render(request, 'accounts/create_booking.html', {'form': form, 'consultants': consultants})
 
 # Booking list
 

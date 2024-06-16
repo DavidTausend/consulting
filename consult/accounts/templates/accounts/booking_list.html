@@ -4,7 +4,10 @@
 <h2>My Bookings</h2>
 <ul>
     {% for booking in bookings %}
-        <li>{{ booking.consultant }} - {{ booking.date }} {{ booking.time }} - {{ booking.status }}</li>
+    <li>
+        {{ booking.consultant }} - {{ booking.date }} {{ booking.time }} - {{ booking.status }}
+        <a href="{% url 'accounts:update_booking_status' booking.id %}" class="btn btn-secondary">Update Status</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}
