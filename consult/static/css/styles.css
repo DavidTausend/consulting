@@ -341,6 +341,41 @@ button:hover {
     color: #fff;
 }
 
+ /*   */
+ /* Add this to your styles.css */
+
+.login-container,
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #000;
+}
+
+.login-container h2,
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container form,
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container button,
+.register-container button {
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+}
+
 /* Media Query */
 /* Small screens (480px and down) */
 @media only screen and (max-width: 480px) {
