@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-!^vaq#h5fm1nuuk0hi3k-$q9$u4t0r8g5ywp@c8hgq(-!wqhok
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io']
+ALLOWED_HOSTS = ['.herokuapp.com', '.gitpod.io', '.codeinstitute-ide.net']
 
 # Application definition
 
@@ -146,5 +146,6 @@ LOGOUT_REDIRECT_URL = 'accounts:login'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
+    'https://*.codeinstitute-ide.net',
     "https://*.herokuapp.com",
 ]
