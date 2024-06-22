@@ -93,22 +93,23 @@ body {
 }
 
 .btn-primary {
-    border-color: #4E54C8;
+    background-color: #000;
+    border-color: #000;
 }
 
 .btn-primary:hover {
-    background-color: #5C61D5;
-    border-color: #5C61D5;
+    background-color: #0008fe;
+    border-color: #0008fe;
 }
 
 .btn-secondary {
-    border-color: #4E54C8;
-    color: #fff;
+    background-color: #000;
+    border-color: #000;
 }
 
 .btn-secondary:hover {
-    background-color: #5C61D5;
-    border-color: #5C61D5;
+    background-color: #0008fe;
+    border-color: #0008fe;
     color: #fff;
 }
 
@@ -265,7 +266,7 @@ a:hover {
 }
 
 .contact-form .form-control:focus {
-    border-color: #4E54C8;
+    border-color: #0008fe;
     box-shadow: 0 0 5px rgba(78, 84, 200, 0.5);
     outline: none;
 }
@@ -284,7 +285,7 @@ a:hover {
 }
 
 .contact-form button[type="submit"]:hover {
-    background-color: #5C61D5;
+    background-color: #0008fe;
 }
 
 /* Booking Section */
@@ -315,7 +316,7 @@ small {
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -327,7 +328,7 @@ button:hover {
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #000;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -337,7 +338,7 @@ button:hover {
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: #0008fe;
     color: #fff;
 }
 
