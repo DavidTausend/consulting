@@ -2,11 +2,16 @@
 
 {% block content %}
 <h2>My Bookings</h2>
-<ul>
+<ul class="list-group">
     {% for booking in bookings %}
-    <li>
-        {{ booking.consultant }} - {{ booking.date }} {{ booking.time }} - {{ booking.status }}
-        <a href="{% url 'accounts:update_booking_status' booking.id %}" class="btn btn-secondary">Update Status</a>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+            <strong>{{ booking.consultant }}</strong> - {{ booking.date }} {{ booking.time }} - <em>{{ booking.status }}</em>
+        </div>
+        <div>
+            <a href="{% url 'accounts:update_booking_status' booking.id %}" class="btn btn-secondary btn-sm">Update Status</a>
+            <a href="{% url 'accounts:submit_review' booking.consultant.id %}" class="btn btn-primary btn-sm ml-2">Leave a Review</a>
+        </div>
     </li>
     {% endfor %}
 </ul>

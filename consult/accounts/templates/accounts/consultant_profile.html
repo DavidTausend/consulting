@@ -1,9 +1,16 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h2>{{ consultant.name }}</h2>
-<img src="{{ consultant.profile_picture.url }}" alt="{{ consultant.name }}" style="max-width: 200px; max-height: 200px;">
-<p><strong>Title:</strong> {{ consultant.title }}</p>
-<p><strong>Specialties:</strong> {{ consultant.specialties }}</p>
-<p>{{ consultant.bio }}</p>
+<h2>Consultant Profile: {{ consultant.name }}</h2>
+<div>
+    <p><strong>Title:</strong> {{ consultant.title }}</p>
+    <p><strong>Bio:</strong> {{ consultant.bio }}</p>
+    <p><strong>Specialties:</strong> {{ consultant.specialties }}</p>
+    {% if consultant.profile_picture %}
+        <img src="{{ consultant.profile_picture.url }}" alt="Profile Picture">
+    {% else %}
+        <p>No profile picture available.</p>
+    {% endif %}
+</div>
+<a href="{% url 'accounts:submit_review' consultant.id %}" class="btn btn-primary">Leave a Review</a>
 {% endblock %}
