@@ -90,6 +90,13 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-container {
+    margin-top: auto;
 }
 
 .btn-primary {
@@ -105,6 +112,7 @@ body {
 .btn-secondary {
     background-color: #000;
     border-color: #000;
+    width: 100%;
 }
 
 .btn-secondary:hover {
@@ -220,6 +228,10 @@ a:hover {
 
 .card-text {
     font-size: 1rem;
+}
+
+.certificate-item {
+    margin-bottom: 15px;
 }
 
 /* Contact Section */
@@ -342,9 +354,7 @@ button:hover {
     color: #fff;
 }
 
- /*   */
- /* Add this to your styles.css */
-
+ /* Login */
 .login-container,
 .register-container {
     max-width: 400px;
@@ -458,6 +468,22 @@ p {
     .navbar-toggler {
         display: none;
     }
+
+    /* Certificate */
+    .certificate-item,
+    .portfolio-item {
+        padding: 5px;
+    }
+
+    .certificate-gallery .row,
+    .portfolio-gallery .row {
+        gap: 15px;
+    }
+}
+
+/* Big screens (920px and up) */
+@media only screen and (min-width: 920px) {
+    
 }
 
 .collapsed {

@@ -4,36 +4,35 @@
 <h2>Create Booking</h2>
 <form method="post">
     {% csrf_token %}
-    <div>
+    <div class="form-group">
         <label for="id_consultant">Consultant:</label>
         {{ form.consultant }}
-        <small>Choose a consultant for your booking.</small>
+        <small class="form-text text-muted">Choose a consultant for your booking.</small>
         {% if form.consultant.errors %}
             <div class="error">{{ form.consultant.errors }}</div>
         {% endif %}
     </div>
-    <div>
+    <div class="form-group">
         <label for="id_date">Date:</label>
         {{ form.date }}
-        <small>Enter a valid date in the format MM-DD-YYYY.</small>
+        <small class="form-text text-muted">Enter a valid date in the format MM-DD-YYYY.</small>
         {% if form.date.errors %}
             <div class="error">{{ form.date.errors }}</div>
         {% endif %}
     </div>
-    <div>
+    <div class="form-group">
         <label for="id_time">Time:</label>
         {{ form.time }}
-        <small>Enter a time in the format HH:MM (24-hour format).</small>
+        <small class="form-text text-muted">Enter a time in the format HH:MM (24-hour format).</small>
         {% if form.time.errors %}
             <div class="error">{{ form.time.errors }}</div>
         {% endif %}
     </div>
-    <button type="submit">Book</button>
+    <button type="submit" class="btn btn-primary">Book</button>
 </form>
 
-<!-- Button to check bookings -->
 <div style="margin-top: 20px;">
-    <a href="{% url 'accounts:booking_list' %}" class="btn btn-secondary">Check My Bookings</a>
+    <a href="{% url 'accounts:booking_list' %}" class="btn btn-secondary btn-block">Check My Bookings</a>
 </div>
 
 {% endblock %}
