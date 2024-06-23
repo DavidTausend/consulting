@@ -134,7 +134,7 @@ def submit_review(request, consultant_id):
             review.consultant = consultant
             review.user = request.user
             review.save()
-            return redirect('accounts:consultant_profile', consultant_id=consultant.id)
+            return redirect('accounts:view_reviews', consultant_id=consultant.id)
     else:
         form = ReviewForm()
     return render(request, 'accounts/submit_review.html', {'form': form, 'consultant': consultant})
@@ -165,6 +165,7 @@ def view_reviews(request, consultant_id):
     consultant = get_object_or_404(Consultant, id=consultant_id)
     reviews = Review.objects.filter(consultant=consultant)
     return render(request, 'accounts/view_reviews.html', {'reviews': reviews, 'consultant': consultant})
+
 
 def portfolio_list(request):
     portfolios = Portfolio.objects.all()

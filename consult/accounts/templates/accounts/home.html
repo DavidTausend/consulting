@@ -30,6 +30,11 @@
             <p>Have questions? Get in touch with us for more information.</p>
             <a class="btn btn-secondary" href="{% url 'accounts:contact' %}" role="button">Contact Us »</a>
         </div>
+        <div class="col-md-4">
+            <h2>View Reviews</h2>
+            <p>See what others have to say about our services.</p>
+            <a class="btn btn-secondary" href="{% url 'accounts:view_reviews' consultant_id=1 %}" role="button">View Reviews »</a>
+        </div>
     </div>
 </div>
 {% endblock %}
