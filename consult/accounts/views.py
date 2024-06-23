@@ -143,12 +143,12 @@ def submit_review(request, consultant_id):
 def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
     if request.user != review.user:
-        return redirect('accounts:consultant_profile', consultant_id=review.consultant.id)
+        return redirect('accounts:view_reviews', consultant_id=review.consultant.id)
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            return redirect('accounts:consultant_profile', consultant_id=review.consultant.id)
+            return redirect('accounts:view_reviews', consultant_id=review.consultant.id)
     else:
         form = ReviewForm(instance=review)
     return render(request, 'accounts/edit_review.html', {'form': form, 'review': review})
@@ -165,7 +165,6 @@ def view_reviews(request, consultant_id):
     consultant = get_object_or_404(Consultant, id=consultant_id)
     reviews = Review.objects.filter(consultant=consultant)
     return render(request, 'accounts/view_reviews.html', {'reviews': reviews, 'consultant': consultant})
-
 
 def portfolio_list(request):
     portfolios = Portfolio.objects.all()

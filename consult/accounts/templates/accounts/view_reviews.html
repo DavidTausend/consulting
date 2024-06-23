@@ -7,6 +7,9 @@
     <li>
         <strong>{{ review.user.username }}:</strong> {{ review.rating }} stars
         <p>{{ review.comments }}</p>
+        {% if review.user == user %}
+        <a href="{% url 'accounts:edit_review' review.id %}" class="btn btn-secondary">Edit Review</a>
+        {% endif %}
     </li>
     {% endfor %}
 </ul>
