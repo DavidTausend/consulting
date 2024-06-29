@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
-
 class Consultant(models.Model):
     name = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
@@ -32,8 +30,6 @@ class Inquiry(models.Model):
 
     def __str__(self):
         return f"Inquiry from {self.name} - {self.email}"
-
-# User Reviews and Feedback System
 
 class Review(models.Model):
     consultant = models.ForeignKey(Consultant, on_delete=models.CASCADE, related_name='reviews')

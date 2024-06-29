@@ -10,7 +10,7 @@
         {% for portfolio in portfolios %}
         <div class="col-md-4 portfolio-item mb-4">
             <div class="card">
-                <img src="{% static portfolio.image %}" alt="{{ portfolio.title }}" class="card-img-top img-fluid">
+                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h5 class="card-title">{{ portfolio.title }}</h5>
                     <p class="card-text">{{ portfolio.description }}</p>
