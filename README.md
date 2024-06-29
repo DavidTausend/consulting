@@ -9,94 +9,68 @@ python3 manage.py runserver
 
 python manage.py add_consultants
 
+python manage.py bulk_uploader
+
+
 Register
 accounts/register/
 
 Cloudinary
-Uploading file: /workspace/consulting/static/images/portfolio/consulting.webp
 Uploaded consulting.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669623/hlvkg6aore5stdioabxe.webp
-Public ID: hlvkg6aore5stdioabxe
-Uploading file: /workspace/consulting/static/images/portfolio/cruddur.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672368/wolgipemdvxubxucdtpx.webp
+Public ID: wolgipemdvxubxucdtpx
 Uploaded cruddur.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669624/vjfipmkzpjaoj8h1ub7h.png
-Public ID: vjfipmkzpjaoj8h1ub7h
-Uploading file: /workspace/consulting/static/images/portfolio/enigma_machine.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672369/gpuw53r3dimcrn6ztkww.png
+Public ID: gpuw53r3dimcrn6ztkww
 Uploaded enigma_machine.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669624/t8oqrdhrac1xfgnihnn1.jpg
-Public ID: t8oqrdhrac1xfgnihnn1
-Uploading file: /workspace/consulting/static/images/portfolio/pokemon.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672370/hkveted51os5rqxhbiyn.jpg
+Public ID: hkveted51os5rqxhbiyn
 Uploaded pokemon.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669625/xdnusgq8f5f0ombnmdld.png
-Public ID: xdnusgq8f5f0ombnmdld
-Uploading file: /workspace/consulting/static/images/portfolio/predictive_analytics.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672371/t7dl3gc13j2jpwga2fwc.png
+Public ID: t7dl3gc13j2jpwga2fwc
 Uploaded predictive_analytics.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669625/nrlks3nmnljriux8ngcl.png
-Public ID: nrlks3nmnljriux8ngcl
-Uploading file: /workspace/consulting/static/images/portfolio/tausendlin.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672371/fk4al7lindm6xxrnvndz.png
+Public ID: fk4al7lindm6xxrnvndz
 Uploaded tausendlin.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669626/vpv7un8fqokort7wvsld.png
-Public ID: vpv7un8fqokort7wvsld
-Uploading file: /workspace/consulting/static/images/portfolio/terrahouse.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672373/oog7prgtjdkrgeophytz.png
+Public ID: oog7prgtjdkrgeophytz
 Uploaded terrahouse.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669627/gn9cuvgvvuisyojzwqiz.png
-Public ID: gn9cuvgvvuisyojzwqiz
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672373/rllmbyb5dxlctzwkskqr.png
+Public ID: rllmbyb5dxlctzwkskqr
 Processing folder: /workspace/consulting/accounts/management/commands/../../../static/images/certificates
-Checking directory: /workspace/consulting/static/images/certificates
-Uploading file: /workspace/consulting/static/images/certificates/aws_cloud_practitioner.webp
 Uploaded aws_cloud_practitioner.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669627/e7qrmjg81l3flsdteuaf.png
-Public ID: e7qrmjg81l3flsdteuaf
-Uploading file: /workspace/consulting/static/images/certificates/aws_cloud_project_bootcamp.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672374/iui2ymmzic0svu2bea2i.png
+Public ID: iui2ymmzic0svu2bea2i
 Uploaded aws_cloud_project_bootcamp.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669627/rdimvhwpq1anqt4ad8ps.png
-Public ID: rdimvhwpq1anqt4ad8ps
-Uploading file: /workspace/consulting/static/images/certificates/aws_developer_associate.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672375/xr7nizmkyhw3avodnwad.png
+Public ID: xr7nizmkyhw3avodnwad
 Uploaded aws_developer_associate.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669628/nee4wyjcxrlyzqeoqqxz.png
-Public ID: nee4wyjcxrlyzqeoqqxz
-Uploading file: /workspace/consulting/static/images/certificates/aws_solutions_architect_associate.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672375/ccnss6gsh96sz0mxj65a.png
+Public ID: ccnss6gsh96sz0mxj65a
 Uploaded aws_solutions_architect_associate.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669628/pygehbacpiyhnlurtwwx.png
-Public ID: pygehbacpiyhnlurtwwx
-Uploading file: /workspace/consulting/static/images/certificates/aws_sysops_administrator.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672376/qirocncxltfcuwbcjr2z.png
+Public ID: qirocncxltfcuwbcjr2z
 Uploaded aws_sysops_administrator.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669629/ntdfz4ovdzyyz3cqy48y.png
-Public ID: ntdfz4ovdzyyz3cqy48y
-Uploading file: /workspace/consulting/static/images/certificates/cloud_digital_leader.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672377/hvclt4oiyqxlwn7tll6n.png
+Public ID: hvclt4oiyqxlwn7tll6n
 Uploaded cloud_digital_leader.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669629/julq5fbj0do1ognv9jnx.png
-Public ID: julq5fbj0do1ognv9jnx
-Uploading file: /workspace/consulting/static/images/certificates/cloud_engineer.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672377/xtkf98nngfua8l4i2tg8.png
+Public ID: xtkf98nngfua8l4i2tg8
 Uploaded cloud_engineer.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669630/f1auipozozi9wo5dxfch.png
-Public ID: f1auipozozi9wo5dxfch
-Uploading file: /workspace/consulting/static/images/certificates/code_challenge.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672378/wym2ui2qqtlvtqzj1jp0.png
+Public ID: wym2ui2qqtlvtqzj1jp0
 Uploaded code_challenge.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669630/j2pnzbaaatbujfnqnbce.png
-Public ID: j2pnzbaaatbujfnqnbce
-Uploading file: /workspace/consulting/static/images/certificates/full_stack_developer.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672379/oksyco0dquswsf54dlav.png
+Public ID: oksyco0dquswsf54dlav
 Uploaded full_stack_developer.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669631/dzyyopeztwivc2hcsy3c.jpg
-Public ID: dzyyopeztwivc2hcsy3c
-Uploading file: /workspace/consulting/static/images/certificates/terraform_associate.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672379/thogmdynmgrquw9n6vhi.jpg
+Public ID: thogmdynmgrquw9n6vhi
 Uploaded terraform_associate.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669631/rubydk9f1zxemlzyft3m.png
-Public ID: rubydk9f1zxemlzyft3m
-Uploading file: /workspace/consulting/static/images/certificates/terraform_bootcamp.webp
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672380/e1b9mt7tmsp50j3ydmjm.png
+Public ID: e1b9mt7tmsp50j3ydmjm
 Uploaded terraform_bootcamp.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669631/pklzxnofzbv7korv3hwq.png
-Public ID: pklzxnofzbv7korv3hwq
-Processing folder: /workspace/consulting/accounts/management/commands/../../../static/images
-Checking directory: /workspace/consulting/static/images
-Uploading file: /workspace/consulting/static/images/cloud.webp
-Uploaded cloud.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669632/nfzp0e2wsrh6lqbot9jp.jpg
-Public ID: nfzp0e2wsrh6lqbot9jp
-Uploading file: /workspace/consulting/static/images/profile.webp
-Uploaded profile.webp
-URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719669632/rv5fvnhdyechldtsa3zh.png
-Public ID: rv5fvnhdyechldtsa3zh
+URL: http://res.cloudinary.com/djvvb5zxr/image/upload/v1719672380/ykaf04iw4s0l8wqyy5br.png
+Public ID: ykaf04iw4s0l8wqyy5br
 
 <h1 align="center">Consulting</h1>
 
