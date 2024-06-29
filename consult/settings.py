@@ -16,13 +16,16 @@ if os.path.isfile('env.py'):
 from pathlib import Path
 import dj_database_url
 import django_heroku
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+import cloudinary_storage
 
 # if os.path.isfile('env.py'):
 #     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -45,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -133,6 +138,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+# Cloudinary settings
+CLOUDINARY_STORAGE = {
+    'CLOUDINARY': os.environ.get('CLOUDINARY_URL'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 # Activate Django-Heroku
 django_heroku.settings(locals())
 
@@ -145,16 +157,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'accounts:login'
 
 # Redirect to a named URL pattern after login
-LOGIN_REDIRECT_URL = 'accounts:home'  
+LOGIN_REDIRECT_URL = 'accounts:home'
 
 # Redirect to a named URL pattern after logout
-LOGOUT_REDIRECT_URL = 'accounts:login'  
+LOGOUT_REDIRECT_URL = 'accounts:login'
 
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
     'https://*.codeinstitute-ide.net',
-    "https://*.herokuapp.com",
+    'https://*.herokuapp.com',
 ]
-
-

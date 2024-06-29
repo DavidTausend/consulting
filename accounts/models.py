@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -7,7 +8,7 @@ class Consultant(models.Model):
     name = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     bio = models.TextField()
-    profile_picture = models.ImageField(upload_to='consultant_pictures/', blank=True, null=True)
+    profile_picture = CloudinaryField('image', blank=True, null=True)
     specialties = models.CharField(max_length=200)
 
     def __str__(self):
@@ -48,7 +49,7 @@ class Review(models.Model):
 class Portfolio(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='portfolio_images/')
+    image = CloudinaryField('image')
     client_testimonial = models.TextField(blank=True, null=True)
 
     def __str__(self):
@@ -57,7 +58,7 @@ class Portfolio(models.Model):
 class Certificate(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='certificates/')
+    image = CloudinaryField('image')
     date_of_issuance = models.DateField()
 
     def __str__(self):
