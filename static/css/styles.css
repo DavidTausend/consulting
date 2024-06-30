@@ -354,7 +354,7 @@ button:hover {
     color: #fff;
 }
 
- /* Login */
+/* Login */
 .login-container,
 .register-container {
     max-width: 400px;
@@ -418,6 +418,15 @@ p {
     .mt-auto {
         display: none;
     }
+
+    .certificate-item img, .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .certificate-item, .portfolio-item {
+        width: 100%;
+    }
 }
 
 /* Medium screens (481px to 768px) */
@@ -450,6 +459,15 @@ p {
     .mt-auto {
         display: none;
     }
+
+    .certificate-item img, .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .certificate-item, .portfolio-item {
+        width: 100%;
+    }
 }
 
 /* Larger screens (769px and up) */
@@ -469,15 +487,18 @@ p {
         display: none;
     }
 
-    /* Certificate */
-    .certificate-item,
-    .portfolio-item {
+    .certificate-item, .portfolio-item {
         padding: 5px;
     }
 
     .certificate-gallery .row,
     .portfolio-gallery .row {
         gap: 15px;
+    }
+
+    .certificate-item img, .portfolio-item img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -557,6 +578,35 @@ p {
     .btn-secondary {
         padding: 15px 30px;
         font-size: 1.25rem;
+    }
+
+    .certificate-item, .portfolio-item {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+    }
+
+    .certificate-item img, .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .certificate-item h3, .portfolio-item h3 {
+        font-size: 1.75rem;
+    }
+
+    .certificate-item p, .portfolio-item p {
+        font-size: 1.25rem;
+    }
+
+    /* Align items in certificates and portfolio grid */
+    .certificates-grid, .portfolio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
