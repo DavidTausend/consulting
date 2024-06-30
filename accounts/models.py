@@ -52,10 +52,12 @@ class Portfolio(models.Model):
         return self.title
 
 class Certificate(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=255)
     description = models.TextField()
-    image = CloudinaryField('image')
-    date_of_issuance = models.DateField()
+    image = models.CharField(max_length=255)
+    issuing_organization = models.CharField(max_length=255, null=True, blank=True)
+    date_issued = models.DateField(null=True, blank=True)
+    expiry_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return self.title

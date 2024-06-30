@@ -10,7 +10,7 @@
         {% for certificate in certificates %}
         <div class="col-md-4 certificate-item mb-4">
             <div class="card">
-                <img src="{{ certificate.image.url }}" alt="{{ certificate.title }}" class="card-img-top img-fluid">
+                <img src="https://res.cloudinary.com/djvvb5zxr/image/upload/{{ certificate.image }}.webp" alt="{{ certificate.title }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ certificate.title }}</h5>
                     <p class="card-text">{{ certificate.description }}</p>
