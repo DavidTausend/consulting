@@ -74,9 +74,9 @@ Public ID: ykaf04iw4s0l8wqyy5br
 
 <h1 align="center">Consulting</h1>
 
-<img src="/assets/images/readme/" alt="Consulting picture">
+<img src="/assets/images/portfolio/consulting.webp" alt="Consulting picture">
 
-<h3 align="center"><a href="https://engima-machine-86a7a1dfa74a.herokuapp.com/">➡️ View the live project here ⬅️</a></h3>
+<h3 align="center"><a href="https://consulting-d8d637d4e865.herokuapp.com/">➡️ View the live project here ⬅️</a></h3>
 
 <br/>
 
@@ -85,6 +85,8 @@ Public ID: ykaf04iw4s0l8wqyy5br
 </div>
 
 ## Introduction
+
+Consulting is a web application designed to showcase a collection of projects that highlight the journey in cloud infrastructure, application development, and problem-solving. It includes a portfolio section, certificates, and a contact form for consultations.
 
 <br>
 
@@ -101,19 +103,53 @@ Public ID: ykaf04iw4s0l8wqyy5br
 
 #### User goals
 
+- View Portfolio: As a user, I want to view a collection of projects to understand the developer's expertise and experience.
+- View Certificates: As a user, I want to see the certifications the developer has obtained to validate their skills.
+- Contact for Consultation: As a user, I want to contact the developer for consultation services easily.
+- Responsive Design: As a user, I want to access the website on any device, including my phone, tablet, or desktop.
+
 #### Company goals
+
+- Showcase Projects: As a company, we want to display our projects in a portfolio to attract potential clients.
+- Display Certifications: As a company, we want to show our certifications to establish credibility and expertise.
+- Engage Users: As a company, we want to provide a contact form to engage users and offer consultation services.
+- Professional Appearance: As a company, we want to ensure the website has a professional and appealing design to create a positive impression.
+
 
 ## Design
 
 ### Typography
 
+The primary font used throughout the website is Arial, sans-serif, providing a clean and professional look. Various font sizes are implemented to create a clear hierarchy, making it easy to differentiate between headings, subheadings, and body text.
+
 ### Color Scheme
+
+The color scheme of the project is inspired by a sleek, modern design. The primary color is black (#000) which is used for the sidebar background and text, creating a strong contrast. The secondary color is white (#fff) for the main content background, ensuring readability. An accent color of bright blue (#0008fe) is used for buttons and hover effects, adding a pop of color and enhancing the user interface. Additional colors include gray (#adb5bd) for secondary text and light gray (#f9f9f9) for sections like the contact form background.
 
 ### Wireframes
 
+Wireframes were created to plan the structure and layout of the website. They provided a clear visual representation of the user interface, helping to streamline the design and development process. Key wireframes include:
+
+Desktop wireframe
+Tablet wireframe
+Mobile wireframe
+
 ## Features
 
+- Responsive Design: Adapts seamlessly to various screen sizes, ensuring a consistent user experience on all devices.
+- Portfolio Section: Displays a curated collection of projects with detailed descriptions and client testimonials.
+- Certificates Section: Showcases certifications with images and detailed descriptions.
+- Contact Form: Allows users to easily reach out for consultations.
+- User Authentication: Secure login and registration functionality for users.
+-Admin Dashboard: Enables easy management of portfolio items, certificates, and user inquiries.
+
 ## Future Implementations
+
+- Blog Section: Add a blog to share insights, tutorials, and updates.
+- Search Functionality: Implement a search feature to help users find specific projects or certificates quickly.
+- Client Testimonials: Allow clients to submit testimonials directly through the website.
+- Advanced Analytics: Integrate advanced analytics to track user interactions and engagement.
+- Enhanced Security: Implement additional security measures to protect user data and ensure privacy.
 
 ### Programming Languages
 
