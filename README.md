@@ -130,9 +130,15 @@ The color scheme of the project is inspired by a sleek, modern design. The prima
 
 Wireframes were created to plan the structure and layout of the website. They provided a clear visual representation of the user interface, helping to streamline the design and development process. Key wireframes include:
 
-Desktop wireframe
-Tablet wireframe
-Mobile wireframe
+Desktop
+Tablet
+Mobile
+
+## Agile Workflow
+
+The development process followed an agile workflow to ensure flexibility, collaboration, and iterative progress. The project was divided into sprints, with each sprint focusing on specific user stories and features. User stories were tracked on the Consulting Board, allowing for transparent progress and effective prioritization.
+
+User stories were divided into categories such as "must have," "should have," "could have," and "won't have," ensuring that the most critical features were developed first. Regular stand-ups, sprint planning, and reviews were conducted to maintain alignment and address any roadblocks promptly.
 
 ## Features
 
@@ -141,7 +147,7 @@ Mobile wireframe
 - Certificates Section: Showcases certifications with images and detailed descriptions.
 - Contact Form: Allows users to easily reach out for consultations.
 - User Authentication: Secure login and registration functionality for users.
--Admin Dashboard: Enables easy management of portfolio items, certificates, and user inquiries.
+- Admin Dashboard: Enables easy management of portfolio items, certificates, and user inquiries.
 
 ## Future Implementations
 
@@ -161,31 +167,33 @@ Mobile wireframe
 
 ### Applications, Plugins & Tools Used
 
-[Gitpod](https://www.gitpod.io):
+[Gitpod](https://www.gitpod.io): An online IDE used for development and collaboration.
 
-[Github](https://github.com/):
+[Github](https://github.com/): Version control and repository hosting service.
 
-[Tiny](https://tinypng.com/):
+[Tiny](https://tinypng.com/): Image compression tool used to optimize images for the web.
 
-[Git](https://git-scm.com/):
+[Git](https://git-scm.com/): Version control system used for tracking changes in source code during development.
 
-[ChatGPT](https://chat.openai.com/auth/login):
+[ChatGPT](https://chat.openai.com/auth/login): AI tool used for generating code snippets, documentation, and providing assistance.
 
-[Am I Responsive](https://ui.dev/amiresponsive):
+[Am I Responsive](https://ui.dev/amiresponsive): Tool for testing and showcasing responsive web design on different devices.
 
-[Preview](https://support.apple.com/de-de/guide/preview/welcome/mac):
+[Preview](https://support.apple.com/de-de/guide/preview/welcome/mac): Apple's built-in app for viewing and editing PDFs and images.
 
-[Slack](https://slack.com):
+[Slack](https://slack.com): Communication and collaboration platform used for team discussions and project management.
 
-[Google Chrome](https://www.google.com/):
+[Google Chrome](https://www.google.com/): Web browser used for testing and debugging the application.
 
-[Balsamiq](https://balsamiq.com):
+[Balsamiq](https://balsamiq.com): Wireframing tool used to create visual representations of the website's layout and structure.
 
-[Python Tutor](https://pythontutor.com/javascript.html#mode=edit):
+[Python Tutor](https://pythontutor.com/javascript.html#mode=edit): Tool for visualizing Python code execution and understanding its behavior.
 
-[Heroku](https://dashboard.heroku.com/login):
+[Heroku](https://dashboard.heroku.com/login): Cloud platform used for deploying, managing, and scaling the web application.
 
-[PEP](https://pep8ci.herokuapp.com/):
+[PEP](https://pep8ci.herokuapp.com/): Tool used to ensure code quality and adherence to PEP 8 Python coding standards.
+
+[Cloudinary] (https://cloudinary.com): Cloud-based image and video management service used for uploading, storing, and serving media files.
 
 ## Deployment & Local Development
 
@@ -235,48 +243,27 @@ After making changes to your local copy, you can commit and push them to GitHub:
 4. Use `git commit -m "Your commit message here"` to commit your changes with a descriptive message.
 5. Use `git push origin main` to push your changes to the main branch on GitHub.
 
-
-## Testing
-
-### Automated Testing
-
-#### Validator Testing
-
-##### HTML Validation
-
-<div align="center"><img src="assets/images/readme/testing/"></div>
-
-#### CSS Validation
-
-##### PEP8 Validation
-
-### Manual testing
-
-#### User Stories Testing
-
-`User Goals`
-
-`Company Goals`
-
-#### Feature Testing
-
-<br>
-
-### Bugs
-
-#### Known Bugs
-
-#### Solved Bugs
-
 ## Credits
 
 ### Content
 
 #### External Articles and Guides
 
+The development of this project was greatly aided by various external resources that provided guidance and insights:
+
+- [Django Documentation](https://docs.djangoproject.com/en/5.0/): The official documentation for Django, which was invaluable for understanding framework specifics.
+- Bootstrap Documentation: For styling and responsive design guidelines.
+- Cloudinary Documentation: For managing image uploads and delivery.
+
 #### Community Contributions and Forums
 
+- [Stack Overflow](https://stackoverflow.com/): For troubleshooting and resolving coding issues.
+- [Django Community](https://forum.djangoproject.com/): For discussions and advice on best practices in Django development.
+- [GitHub Community](https://github.com/): For repositories, code examples, and collaborative discussions.
+
 #### Design and Spacing Techniques
+- [CSS Tricks](https://css-tricks.com/): For CSS tips and techniques.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/): For detailed information on HTML, CSS, and JavaScript.
 
 ### Software Design Documentation
 
