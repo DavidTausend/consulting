@@ -201,26 +201,57 @@ User stories were divided into categories such as "must have," "should have," "c
 
 ### Local Development
 
-The site is deployed using Heroku.
+1. Clone the repository from GitHub by clicking the "Code" button and copying the URL.
+2. Open your preferred IDE and open a terminal session in the directory you want to clone the repository to.
+3. Type git clone followed by the URL you copied in step 1 and press enter.
+4. (Optional): Set up a virtual environment in the project folder using python3 -m venv [virtual_environment name]
+5. (Optional): To activate the virtual environment on Windows run myvenv\Scripts\activate and on macOS and Linux, run source myvenv/bin/activate
+6. Install the required dependencies by typing pip install -r requirements.txt in the terminal.
+- Note: The project is setup to use environment variables. You will need to set these up in your local environment. See Environment Variables for more information.
+7. Connect your database of choice and run the migrations by typing python manage.py migrate in the terminal.
+8. Create a superuser by typing python manage.py createsuperuser in the terminal and following the prompts.
+9. (Optional):: Fixtures for Users and also the individual blog posts are included in the project in the fixtures directory. To add the pre-populated data to the database, run python manage.py loaddata fixtures/[fixture_name].json.
+10. Run the app by typing python manage.py runserver in the terminal and opening the URL in your browser.
 
-To deploy the site using Heroku - [Heroku](https://<>.herokuapp.com/)
+#### Heroku Deployment
 
-1. Fork or clone this repository.
-2. Create a new Heroku app.
-3. Choose a region.
-4. Set the buildbacks to Python and NodeJS in that order.
-5. In Heroku's settings, add a config var of PORT and set the value to 8000.
-6. Link the Heroku app to the Github respository.
-7. Click on Deploy.
+1. Ensure the project repository has been uploaded to Github.
+2. Login to the Heroku dashboard and create a new app.
+3. Connect your GitHub repository to your Heroku app.
+4. In the Settings tab, ensure that the Python Buildpack is added.
+5. Set environment variables in the Config Vars section of the Settings tab.
+6. In the Deploy tab, enable automatic deploys from your GitHub repository.
+7. Click the "Deploy Branch" button to deploy the app.
+8. Once the app has been deployed, click the "Open App" button to view the app.
 
-The site has now been deployed. Please note that this process may take a few minutes before the site goes live.
+#### Environment Variables
+
+For local deployment, you will need to create a .env file in the root directory of the project and set the environment variables in this file.
+
+- Note: Ensure the .env file is included in the .gitignore file to exclude it from your GitHub repo to prevent the environment variables from being publicly exposed.
+
+For Heroku deployment, you will need to set the environment variables through the Heroku CLI or through the Heroku dashboard under 'Config Vars'.
+
+You need to define the following environment variables:
+
+- SECRET_KEY: The secret key for your Django project. This is a critical setting that's used for cryptographic signing, and should be kept secret at all times. It's used to provide cryptographic signing, and should be a long, random string of bytes.
+
+- DEBUG: A boolean that turns on/off debug mode. Set to True for development to enable detailed error pages and logging for debugging. Set to False in production to improve performance and security.
+
+- DATABASE_URL: The URL for your database. This should include the database engine, username, password, host, port, and database name. For a Postgres database, it typically looks like postgres://USER:PASSWORD@HOST:PORT/DB_NAME.
+
+- CLOUDINARY_API_KEY: Your Cloudinary account's API key. This key is used to authenticate requests to Cloudinary's services for uploading and managing images and other media assets.
+
+- CLOUDINARY_API_SECRET: Your Cloudinary account's API secret. This secret is used alongside the API key to securely sign requests to Cloudinary.
+
+- CLOUDINARY_CLOUD_NAME: Your Cloudinary account's cloud name. This is the unique name that identifies your cloud within Cloudinary. It's used in the URL structure for accessing uploaded resources.
 
 #### How to Fork
 
 To fork the repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project: [DavidTausend/consulting](https://davidtausend.github.io/)
+2. Go to the repository for this project: [DavidTausend/consulting](https://davidtausend.github.io/consulting)
 3. Click the "Fork" button in the top right corner.
 
 #### How to Clone
@@ -228,7 +259,7 @@ To fork the repository:
 To clone the repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project: [DavidTausend/consulting](https://davidtausend.github.io/)
+2. Go to the repository for this project: [DavidTausend/consulting](https://davidtausend.github.io/consulting)
 3. Click on the "Code" button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type `git clone` into the terminal and then paste the link you copied in step 3. Press enter.
@@ -242,6 +273,10 @@ After making changes to your local copy, you can commit and push them to GitHub:
 3. Use `git add .` to stage all changes for commit, or `git add <filename>` to stage specific files.
 4. Use `git commit -m "Your commit message here"` to commit your changes with a descriptive message.
 5. Use `git push origin main` to push your changes to the main branch on GitHub.
+
+## Testing
+
+[Testing documetation](TESTING.md)
 
 ## Credits
 
@@ -267,8 +302,27 @@ The development of this project was greatly aided by various external resources 
 
 ### Software Design Documentation
 
+Detailed documentation for the software design, including architecture diagrams, data models, and user flows, was created to ensure a structured development process. This documentation included:
+
+- Architecture Diagrams: Illustrating the overall structure of the application, including components and their interactions.
+- Data Models: Defining the structure of the database and relationships between different entities.
+- User Flows: Mapping out the user journey through the application to ensure a seamless experience.
+
 ### Media
 
+- Images: All images used in the project were either created specifically for the project, sourced from free or from certificates, high-quality images.
+
+- Icons: Icons were sourced from Font Awesome, providing a consistent and visually appealing icon set.
+
 ### Acknowledgments
+
+Special thanks to the following individuals and organizations for their support and contributions to this project:
+
+- Code Institute: For providing a comprehensive course that laid the foundation for this project.
+- Mentor: For guidance and feedback throughout the development process.
+- Friends and Family: For their encouragement and support.
+- Community Contributors: To everyone who provided feedback, suggestions, and support through forums and social media.
+
+This project would not have been possible without the collective efforts and resources of the community. Thank you to everyone who contributed, directly or indirectly, to the successful completion of this project.
 
 [Back to Top ^](#introduction)
