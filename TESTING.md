@@ -12,13 +12,48 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 [W3C HTML Validation Service](https://validator.w3.org/): 
 
+|[Homepage] (https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2F)| pass|
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+
+
+
+https://consulting-d8d637d4e865.herokuapp.com/
+
 ##### HTML Validation
 
 <div align="center"><img src="assets/images/readme/testing/"></div>
 
 #### CSS Validation
 
-[W3C CSS Validation Service]
+[W3C CSS Validation Service] ():
+
+<div align="center"><img src="assets/images/readme/testing/css/css.webp"></div>
 
 ### Javascript Validation
 
