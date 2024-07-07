@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+
 class Consultant(models.Model):
     name = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
@@ -11,6 +12,7 @@ class Consultant(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Booking(models.Model):
     consultant = models.ForeignKey(Consultant, on_delete=models.CASCADE)
@@ -22,6 +24,7 @@ class Booking(models.Model):
     def __str__(self):
         return f"{self.consultant} - {self.client} - {self.date} {self.time}"
 
+
 class Inquiry(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -31,8 +34,11 @@ class Inquiry(models.Model):
     def __str__(self):
         return f"Inquiry from {self.name} - {self.email}"
 
+
 class Review(models.Model):
-    consultant = models.ForeignKey(Consultant, on_delete=models.CASCADE, related_name='reviews')
+    consultant = models.ForeignKey(
+        Consultant, on_delete=models.CASCADE, related_name='reviews'
+    )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
     comments = models.TextField()
@@ -41,6 +47,7 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review by {self.user.username} for {self.consultant.name}"
+
 
 class Portfolio(models.Model):
     title = models.CharField(max_length=200)
@@ -51,11 +58,14 @@ class Portfolio(models.Model):
     def __str__(self):
         return self.title
 
+
 class Certificate(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     image = models.CharField(max_length=255)
-    issuing_organization = models.CharField(max_length=255, null=True, blank=True)
+    issuing_organization = models.CharField(
+        max_length=255, null=True, blank=True
+    )
     date_issued = models.DateField(null=True, blank=True)
     expiry_date = models.DateField(null=True, blank=True)
 

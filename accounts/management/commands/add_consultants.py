@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from accounts.models import Consultant
 
+
 class Command(BaseCommand):
     help = 'Add consultant entries to the database'
 
@@ -9,7 +10,10 @@ class Command(BaseCommand):
             {
                 'name': 'David Tausend',
                 'title': 'Junior Cloud Consulting',
-                'bio': 'David is a recent graduate with a fresh perspective on Full Stack practices.',
+                'bio': (
+                    'David is a recent graduate with a fresh perspective on '
+                    'Full Stack practices.'
+                ),
                 'specialties': 'AWS, Full Stack, Containers',
             },
         ]
@@ -24,6 +28,14 @@ class Command(BaseCommand):
                 }
             )
             if created:
-                self.stdout.write(self.style.SUCCESS(f"Successfully added consultant: {consultant.name}"))
+                self.stdout.write(
+                    self.style.SUCCESS(
+                        f"Successfully added consultant: {consultant.name}"
+                    )
+                )
             else:
-                self.stdout.write(self.style.WARNING(f"Consultant already exists: {consultant.name}"))
+                self.stdout.write(
+                    self.style.WARNING(
+                        f"Consultant already exists: {consultant.name}"
+                    )
+                )

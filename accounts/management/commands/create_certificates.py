@@ -1,5 +1,8 @@
+import os
+import cloudinary.uploader
 from django.core.management.base import BaseCommand
 from accounts.models import Certificate
+
 
 class Command(BaseCommand):
     help = 'Create certificate items'
@@ -8,15 +11,19 @@ class Command(BaseCommand):
         certificates = [
             {
                 "title": "AWS Certified Cloud Practitioner",
-                "description": "Credential validating expertise in AWS cloud services.",
-                "image": "iui2ymmzic0svu2bea2i",  
+                "description": (
+                    "Credential validating expertise in AWS cloud services."
+                ),
+                "image": "iui2ymmzic0svu2bea2i",
                 "issuing_organization": "Amazon Web Services",
                 "date_issued": "2023-06-01",
                 "expiry_date": "2026-06-01",
             },
             {
                 "title": "AWS Cloud Project Bootcamp",
-                "description": "Comprehensive training on AWS Cloud Projects.",
+                "description": (
+                    "Comprehensive training on AWS Cloud Projects."
+                ),
                 "image": "xr7nizmkyhw3avodnwad",
                 "issuing_organization": "Amazon Web Services",
                 "date_issued": "2023-05-01",
@@ -24,7 +31,10 @@ class Command(BaseCommand):
             },
             {
                 "title": "AWS Certified Developer - Associate",
-                "description": "Certification for demonstrating expertise in AWS development.",
+                "description": (
+                    "Certification for demonstrating expertise in AWS "
+                    "development."
+                ),
                 "image": "ccnss6gsh96sz0mxj65a",
                 "issuing_organization": "Amazon Web Services",
                 "date_issued": "2023-04-01",
@@ -32,7 +42,9 @@ class Command(BaseCommand):
             },
             {
                 "title": "AWS Certified Solutions Architect - Associate",
-                "description": "Credential validating expertise in AWS architecture.",
+                "description": (
+                    "Credential validating expertise in AWS architecture."
+                ),
                 "image": "qirocncxltfcuwbcjr2z",
                 "issuing_organization": "Amazon Web Services",
                 "date_issued": "2023-03-01",
@@ -40,7 +52,9 @@ class Command(BaseCommand):
             },
             {
                 "title": "AWS Certified SysOps Administrator",
-                "description": "Certification for expertise in AWS system operations.",
+                "description": (
+                    "Certification for expertise in AWS system operations."
+                ),
                 "image": "hvclt4oiyqxlwn7tll6n",
                 "issuing_organization": "Amazon Web Services",
                 "date_issued": "2023-02-01",
@@ -48,7 +62,10 @@ class Command(BaseCommand):
             },
             {
                 "title": "Google Cloud Digital Leader",
-                "description": "Certification for demonstrating expertise in Google Cloud Platform services.",
+                "description": (
+                    "Certification for demonstrating expertise in Google "
+                    "Cloud Platform services."
+                ),
                 "image": "xtkf98nngfua8l4i2tg8",
                 "issuing_organization": "Google Cloud",
                 "date_issued": "2023-01-01",
@@ -56,7 +73,10 @@ class Command(BaseCommand):
             },
             {
                 "title": "Google Professional Cloud Engineer",
-                "description": "Credential validating expertise in Google Cloud engineering.",
+                "description": (
+                    "Credential validating expertise in Google Cloud "
+                    "engineering."
+                ),
                 "image": "wym2ui2qqtlvtqzj1jp0",
                 "issuing_organization": "Google Cloud",
                 "date_issued": "2022-12-01",
@@ -64,7 +84,9 @@ class Command(BaseCommand):
             },
             {
                 "title": "Code Challenge Winner",
-                "description": "Award for winning a prestigious coding challenge.",
+                "description": (
+                    "Award for winning a prestigious coding challenge."
+                ),
                 "image": "oksyco0dquswsf54dlav",
                 "issuing_organization": "Code Challenge Organization",
                 "date_issued": "2022-11-01",
@@ -72,7 +94,9 @@ class Command(BaseCommand):
             },
             {
                 "title": "Full Stack Developer Bootcamp",
-                "description": "Comprehensive training on full stack development.",
+                "description": (
+                    "Comprehensive training on full stack development."
+                ),
                 "image": "thogmdynmgrquw9n6vhi",
                 "issuing_organization": "Bootcamp Organization",
                 "date_issued": "2022-10-01",
@@ -80,7 +104,9 @@ class Command(BaseCommand):
             },
             {
                 "title": "HashiCorp Certified: Terraform Associate",
-                "description": "Certification for expertise in Terraform.",
+                "description": (
+                    "Certification for expertise in Terraform."
+                ),
                 "image": "e1b9mt7tmsp50j3ydmjm",
                 "issuing_organization": "HashiCorp",
                 "date_issued": "2022-09-01",
@@ -102,6 +128,11 @@ class Command(BaseCommand):
                 defaults=certificate_data
             )
             if created:
-                self.stdout.write(self.style.SUCCESS(f'Certificate item "{certificate.title}" created successfully.'))
+                self.stdout.write(self.style.SUCCESS(
+                    f'Certificate item "{certificate.title}" created '
+                    'successfully.'
+                ))
             else:
-                self.stdout.write(self.style.WARNING(f'Certificate item "{certificate.title}" already exists.'))
+                self.stdout.write(self.style.WARNING(
+                    f'Certificate item "{certificate.title}" already exists.'
+                ))
