@@ -17,7 +17,7 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 |[Homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2F)|pass|
 |[Portfolio](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fportfolio%2F)|pass|
 |[Certificates](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fcertificates%2F)|pass|
-|[Create a booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fcreate_booking%2F)||
+|[Create a booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fcreate_booking%2F)|pass|
 |[Contact](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fcontact%2F)|pass|
 |[About me](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fabout_me%2F)|pass|
 |[Login](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Flogin%2F)|pass|
@@ -43,9 +43,20 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 ### Accessibility
 
-<img src="assets/images/readme/testing/wave-validation.webp" alt="wave validation results">
+<img src="assets/images/readme/testing/wave.webp" alt="wave validation results">
 
 ## Lighthouse Testing
+
+Homepage
+Portfolio
+Certificates
+Create a booking
+Contact
+About me
+Login
+Bookings
+Update a booking
+Submit a review
 
 ## Device Testing
 
