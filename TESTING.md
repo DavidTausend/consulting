@@ -4,6 +4,31 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 ## Table of Contents
 
+- [Testing Documentation](#testing-documentation)
+  * [Table of Contents](#table-of-contents)
+    + [Automated Testing](#automated-testing)
+      - [Validator Testing](#validator-testing)
+        * [HTML Validation](#html-validation)
+      - [CSS Validation](#css-validation)
+    + [Javascript Validation](#javascript-validation)
+      - [PEP8 Validation](#pep8-validation)
+    + [Accessibility](#accessibility)
+  * [Lighthouse Testing](#lighthouse-testing)
+    + [Lighthouse Results](#lighthouse-results)
+  * [Device Testing](#device-testing)
+    + [Devices](#devices)
+    + [Browsers](#browsers)
+    + [Responsiveness](#responsiveness)
+    + [Manual testing](#manual-testing)
+      - [User Stories Testing](#user-stories-testing)
+      - [Feature Testing](#feature-testing)
+    + [Bugs](#bugs)
+      - [Known Bugs](#known-bugs)
+      - [Solved Bugs](#solved-bugs)
+- [Paste Your Document In Here](#paste-your-document-in-here)
+  * [And a table of contents](#and-a-table-of-contents)
+  * [On the right](#on-the-right)
+
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
 ### Automated Testing
@@ -39,7 +64,19 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 [CI Python Linter](https://pep8ci.herokuapp.com/): The code was validated using the CI Python Linter to ensure it follows PEP8 standards. This helps maintain a clean and consistent codebase, making it easier to read and maintain.
 
+<div align="center"><img src="assets/images/readme/testing/py/admin.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/apps.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/asgi.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/certificates.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/cloudinary.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/consultant.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/manage.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/middleware.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/profolio.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/settings.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/url.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/view.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/wsgi.webp"></div>
 
 ### Accessibility
 

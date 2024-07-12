@@ -92,6 +92,54 @@ Consulting is a web application designed to showcase a collection of projects th
 
 ## Table of Contents
 
+- [Introduction](#introduction)
+- [Table of Contents](#table-of-contents)
+- [User Experience (UX)](#user-experience--ux-)
+  * [User Stories](#user-stories)
+    + [User goals](#user-goals)
+    + [Company goals](#company-goals)
+- [Design](#design)
+  * [Typography](#typography)
+  * [Color Scheme](#color-scheme)
+  * [Wireframes](#wireframes)
+    + [Entity-Relationship Diagram](#entity-relationship-diagram)
+- [Agile Workflow](#agile-workflow)
+  * [Epics, User Stories and Tasks](#epics--user-stories-and-tasks)
+    + [Epics](#epics)
+    + [User Stories](#user-stories-1)
+    + [Tasks](#tasks)
+  * [Github Project Boards](#github-project-boards)
+    + [User Stores List](#user-stores-list)
+    + [Kanban Board](#kanban-board)
+    + [MoSCoW Prioritization](#moscow-prioritization)
+    + [Story Points and Stars](#story-points-and-stars)
+    + [Project Milestones](#project-milestones)
+    + [MVP Milestone](#mvp-milestone)
+    + [Post-MVP Milestone](#post-mvp-milestone)
+    + [Enhancement Milestone](#enhancement-milestone)
+- [Features](#features)
+- [Future Implementations](#future-implementations)
+  * [Programming Languages](#programming-languages)
+  * [Applications, Plugins & Tools Used](#applications--plugins---tools-used)
+- [Deployment & Local Development](#deployment---local-development)
+  * [Deployment](#deployment)
+  * [Local Development](#local-development)
+    + [Heroku Deployment](#heroku-deployment)
+    + [Environment Variables](#environment-variables)
+    + [How to Fork](#how-to-fork)
+    + [How to Clone](#how-to-clone)
+    + [Committing and Pushing Changes](#committing-and-pushing-changes)
+- [Testing](#testing)
+- [Credits](#credits)
+  * [Content](#content)
+    + [Final Thoughts](#final-thoughts)
+    + [Challenges](#challenges)
+    + [External Articles and Guides](#external-articles-and-guides)
+    + [Community Contributions and Forums](#community-contributions-and-forums)
+    + [Design and Spacing Techniques](#design-and-spacing-techniques)
+  * [Software Design Documentation](#software-design-documentation)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
 
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
@@ -134,11 +182,64 @@ Desktop
 Tablet
 Mobile
 
+#### Entity-Relationship Diagram
+
++-------------+       +---------+       +---------+       +---------+
+|  Consultant |       |  User   |       | Inquiry |       | Portfolio|
++-------------+       +---------+       +---------+       +---------+
+| id (PK)     |       | id (PK) |       | id (PK) |       | id (PK) |
+| name        |       | username|       | name    |       | title   |
+| title       |       | email   |       | email   |       | description|
+| bio         |       | password|       | message |       | image   |
+| profile_pic |       +---------+       | created_at|      | client_testimonial|
+| specialties |                         +---------+       +---------+
++-------------+                                             |
+    | |                                                     |
+    | +-----------------+     +-----------------+           |
+    |                   |     |                 |           |
+    |                   |     |                 |           |
+    |                   v     v                 |           |
++-----------------+ +-----------------+         | +-----------------+
+|    Booking      | |    Review       |         +->    Certificate  |
++-----------------+ +-----------------+         | +-----------------+
+| id (PK)         | | id (PK)         |         | | id (PK)         |
+| consultant_id (FK)| consultant_id (FK)|       | | title           |
+| client_id (FK)  | | user_id (FK)     |         | | description     |
+| date            | | rating           |         | | image           |
+| time            | | comments         |         | | issuing_org     |
+| status          | | created_at       |         | | date_issued     |
++-----------------+ | updated_at       |         | | expiry_date     |
+                    +-----------------+         +-----------------+
+
+This ERD provides a clear structure of how different entities relate to each other within the project database.
+
 ## Agile Workflow
 
-The development process followed an agile workflow to ensure flexibility, collaboration, and iterative progress. The project was divided into sprints, with each sprint focusing on specific user stories and features. User stories were tracked on the Consulting Board, allowing for transparent progress and effective prioritization.
+### Epics, User Stories and Tasks
 
-User stories were divided into categories such as "must have," "should have," "could have," and "won't have," ensuring that the most critical features were developed first. Regular stand-ups, sprint planning, and reviews were conducted to maintain alignment and address any roadblocks promptly.
+#### Epics
+
+#### User Stories
+
+#### Tasks
+
+### Github Project Boards
+
+#### User Stores List
+
+#### Kanban Board
+
+#### MoSCoW Prioritization
+
+#### Story Points and Stars 
+
+#### Project Milestones
+
+#### MVP Milestone
+
+#### Post-MVP Milestone
+
+#### Enhancement Milestone
 
 ## Features
 
@@ -331,7 +432,5 @@ Special thanks to the following individuals and organizations for their support 
 - Community Contributors: To everyone who provided feedback, suggestions, and support through forums and social media.
 
 This project would not have been possible without the collective efforts and resources of the community. Thank you to everyone who contributed, directly or indirectly, to the successful completion of this project.
-
-
 
 [Back to Top ^](#introduction)
