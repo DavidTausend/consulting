@@ -151,17 +151,17 @@ Consulting is a web application designed to showcase a collection of projects th
 
 #### User goals
 
-- View Portfolio: As a user, I want to view a collection of projects to understand the developer's expertise and experience.
-- View Certificates: As a user, I want to see the certifications the developer has obtained to validate their skills.
-- Contact for Consultation: As a user, I want to contact the developer for consultation services easily.
-- Responsive Design: As a user, I want to access the website on any device, including my phone, tablet, or desktop.
+- As a user, I want to view a collection of projects to understand the developer's expertise and experience.
+- As a user, I want to see the certifications the developer has obtained to validate their skills.
+- As a user, I want to contact the developer for consultation services easily.
+- As a user, I want to access the website on any device, including my phone, tablet, or desktop.
 
 #### Company goals
 
-- Showcase Projects: As a company, we want to display our projects in a portfolio to attract potential clients.
-- Display Certifications: As a company, we want to show our certifications to establish credibility and expertise.
-- Engage Users: As a company, we want to provide a contact form to engage users and offer consultation services.
-- Professional Appearance: As a company, we want to ensure the website has a professional and appealing design to create a positive impression.
+- As a company, we want to display our projects in a portfolio to attract potential clients.
+- As a company, we want to show our certifications to establish credibility and expertise.
+- As a company, we want to provide a contact form to engage users and offer consultation services.
+- As a company, we want to ensure the website has a professional and appealing design to create a positive impression.
 
 
 ## Design
@@ -178,9 +178,9 @@ The color scheme of the project is inspired by a sleek, modern design. The prima
 
 Wireframes were created to plan the structure and layout of the website. They provided a clear visual representation of the user interface, helping to streamline the design and development process. Key wireframes include:
 
-Desktop
-Tablet
-Mobile
+[Desktop]()
+[Tablet]()
+[Mobile]()
 
 #### Entity-Relationship Diagram
 
@@ -217,29 +217,94 @@ This ERD provides a clear structure of how different entities relate to each oth
 
 ### Epics, User Stories and Tasks
 
+In this project, Agile methodologies were employed to ensure a flexible and iterative approach to development. The work was divided into Epics, User Stories, and Tasks, managed through GitHub Project Boards.
+
 #### Epics
+
+Epics are large bodies of work that can be broken down into a number of smaller tasks or User Stories. They represent significant areas of functionality within the project. Examples of Epics in this project include:
+
+- User Management
+- Booking System
+- Website Content and Structure
+- Payment and Transactions
+- User Experience and Accessibility
 
 #### User Stories
 
+User Stories are short, simple descriptions of a feature told from the perspective of the user. Each User Story addresses specific user needs and provides value to the end-user. Examples of User Stories in this project include:
+
+1. User Registration and Authentication
+2. Booking System
+3. Consultant Profiles
+4. Contact Information and Inquiry Form
+5. Advanced Search and Filters for Consultations
+6. Secure Payment System
+7. Real-time Notifications
+8. Admin Dashboard for Bookings Management
+9. User Reviews and Feedback System
+10. Accessibility and Mobile Responsiveness
+11. Portfolio Section
+12. Certificates Section
+13. Homepage Design and Functionality
+14. About Me Section
+
+<div align="center"><img src="assets/images/readme/testing/user_story.webp" alt="User Stories List"></div>
+
 #### Tasks
+
+Tasks are the individual steps needed to complete a User Story. They are the smallest units of work in the Agile workflow. Examples of Tasks for the User Story "User Registration and Authentication" might include:
+
+- Create the registration form
+- Implement user authentication
+- Validate user input
+- Set up email verification
 
 ### Github Project Boards
 
+GitHub Project Boards were used to manage the project's workflow and track progress.
+
 #### User Stores List
+
+The User Stories List provides an overview of all User Stories, their status, priority, and assignees.
+
+<div align="center"><img src="assets/images/readme/testing/user_stories_list.webp" alt="User Stories List"></div>
 
 #### Kanban Board
 
+The Kanban Board visualizes the flow of work, showing what is to be done, what is in progress, and what has been completed. This helps in managing tasks efficiently and ensures that the team is focused on the current priorities.
+
+<div align="center"><img src="assets/images/readme/testig/kanban_board.webp" alt="Kanban Board"></div>
+
 #### MoSCoW Prioritization
+
+MoSCoW Prioritization was used to categorize the User Stories based on their importance:
+
+- **Must Have**: Critical features that are essential for the MVP.
+- **Should Have**: Important features that are not critical but add significant value.
+- **Could Have**: Nice-to-have features that enhance the user experience.
+- **Won't Have**: Features that are out of scope for the current development cycle.
+
+<div align="center"><img src="assets/images/readme/testing/moscow.webp" alt="MoSCoW Prioritization"></div>
 
 #### Story Points and Stars 
 
+Story Points and Stars were used to estimate the effort required to complete each User Story. This helps in planning and allocating resources effectively.
+
 #### Project Milestones
+
+Project Milestones were set to track the progress of the project. Each milestone represents a significant point in the project timeline, such as the completion of the MVP or the implementation of critical features.
 
 #### MVP Milestone
 
+The MVP (Minimum Viable Product) Milestone includes the essential features needed to deploy a functional version of the application. This milestone focuses on delivering the core functionality.
+
 #### Post-MVP Milestone
 
+The Post-MVP Milestone includes additional features and enhancements that were not included in the initial MVP. These features aim to improve the user experience and add more value to the application.
+
 #### Enhancement Milestone
+
+The Enhancement Milestone includes ongoing improvements and optimizations to the application. This milestone ensures that the application remains up-to-date and continues to meet user needs.
 
 ## Features
 
@@ -382,8 +447,6 @@ After making changes to your local copy, you can commit and push them to GitHub:
 ## Credits
 
 ### Content
-
-#### Final Thoughts
 
 #### Challenges
 
