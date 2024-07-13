@@ -40,14 +40,23 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 [W3C HTML Validation Service](https://validator.w3.org/): All HTML files were tested using the W3C HTML Validator. The service helped ensure the HTML syntax was correct, improving the accessibility and search engine optimization of the project. Errors and warnings were addressed to maintain clean and valid HTML.
 
 |[Homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2F)|pass|
+
 |[Portfolio](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fportfolio%2F)|pass|
+
 |[Certificates](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fcertificates%2F)|pass|
+
 |[Create a booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fcreate_booking%2F)|pass|
+
 |[Contact](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fcontact%2F)|pass|
+
 |[About me](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fabout_me%2F)|pass|
+
 |[Login](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Flogin%2F)|pass|
+
 |[Bookings](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fbookings%2F)|pass|
+
 |[Update a booking]()|pass|
+
 |[Submit a review](https://consulting-d8d637d4e865.herokuapp.com/consultants/1/reviews/submit/)|pass|
 
 #### CSS Validation
@@ -191,8 +200,11 @@ These are the different browsers I have tested my site on after deployment.
 
 ### Responsiveness
 
+The application is designed to be fully responsive, ensuring a seamless user experience across various devices and screen sizes. This was achieved by using a combination of flexible grids, media queries, and responsive design principles. Key components and sections were tested on multiple devices, including desktops, tablets, and mobile phones, to ensure consistency and usability.
 
 ### Manual testing
+
+Manual testing was conducted to verify that the application meets the specified requirements and performs as expected. This included testing various user interactions, form submissions, navigation flows, and overall user experience.
 
 #### User Stories Testing
 

@@ -184,32 +184,7 @@ Wireframes were created to plan the structure and layout of the website. They pr
 
 #### Entity-Relationship Diagram
 
-+-------------+       +---------+       +---------+       +---------+
-|  Consultant |       |  User   |       | Inquiry |       | Portfolio|
-+-------------+       +---------+       +---------+       +---------+
-| id (PK)     |       | id (PK) |       | id (PK) |       | id (PK) |
-| name        |       | username|       | name    |       | title   |
-| title       |       | email   |       | email   |       | description|
-| bio         |       | password|       | message |       | image   |
-| profile_pic |       +---------+       | created_at|      | client_testimonial|
-| specialties |                         +---------+       +---------+
-+-------------+                                             |
-    | |                                                     |
-    | +-----------------+     +-----------------+           |
-    |                   |     |                 |           |
-    |                   |     |                 |           |
-    |                   v     v                 |           |
-+-----------------+ +-----------------+         | +-----------------+
-|    Booking      | |    Review       |         +->    Certificate  |
-+-----------------+ +-----------------+         | +-----------------+
-| id (PK)         | | id (PK)         |         | | id (PK)         |
-| consultant_id (FK)| consultant_id (FK)|       | | title           |
-| client_id (FK)  | | user_id (FK)     |         | | description     |
-| date            | | rating           |         | | image           |
-| time            | | comments         |         | | issuing_org     |
-| status          | | created_at       |         | | date_issued     |
-+-----------------+ | updated_at       |         | | expiry_date     |
-                    +-----------------+         +-----------------+
+<div align="center"><img src="assets/images/readme/testing/user_story.webp" alt="Entity-Relationship Diagram"></div>
 
 This ERD provides a clear structure of how different entities relate to each other within the project database.
 
@@ -337,7 +312,7 @@ The Enhancement Milestone includes ongoing improvements and optimizations to the
 
 [Github](https://github.com/): Version control and repository hosting service.
 
-[Tiny](https://tinypng.com/): Image compression tool used to optimize images for the web.
+[TinyPNG](https://tinypng.com/): Image compression tool used to optimize images for the web.
 
 [Git](https://git-scm.com/): Version control system used for tracking changes in source code during development.
 
