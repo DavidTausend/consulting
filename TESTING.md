@@ -214,5 +214,35 @@ These are the different browsers I have tested my site on after deployment.
 
 #### Known Bugs
 
+##### Responsive Design Issues on Small Screens
+
+Certain elements do not align properly or overlap when viewed on small screens, particularly in the portfolio section and affects user experience on mobile devices.
+
+##### Image Upload Limits
+
+Uploading large images sometimes results in a timeout or error and may face difficulties uploading large portfolio or certificate images.
+Workaround: Resize images to smaller dimensions before uploading.
+
 #### Solved Bugs
+
+#### Database Connection Error on Heroku
+
+The application was experiencing intermittent database connection errors on Heroku. I updated the database connection settings and ensured that the dj_database_url configuration is correctly set. This solved the issue of intermittent disconnections.
+
+#### PEP8 Compliance Errors
+
+Several PEP8 compliance errors were identified in the codebase, including line length issues and whitespace errors. The codebase was refactored to adhere to PEP8 guidelines, ensuring all lines are within the 79-character limit and removing trailing whitespaces.
+
+#### Empty Button Accessibility Error
+
+A button element was identified as empty during accessibility testing. I Added appropriate text inside the button element to ensure it is accessible to screen readers.
+
+#### HTML Validation Errors
+
+Several HTML validation errors were identified, including unclosed tags and elements used in incorrect contexts. The HTML structure was corrected to ensure all elements are properly nested and all tags are closed appropriately.
+
+#### Certificate Date Formatting Issue
+
+Certificate expiry dates were not displayed correctly when the expiry date was set to None. I Updated the template logic to handle None values and display "No expiry date" instead of leaving the field blank.
+
 
