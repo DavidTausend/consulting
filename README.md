@@ -184,7 +184,7 @@ Wireframes were created to plan the structure and layout of the website. They pr
 
 #### Entity-Relationship Diagram
 
-<div align="center"><img src="assets/images/readme/testing/user_story.webp" alt="Entity-Relationship Diagram"></div>
+<div align="center"><img src="assets/images/readme/testing/erd.webp" alt="Entity-Relationship Diagram"></div>
 
 This ERD provides a clear structure of how different entities relate to each other within the project database.
 

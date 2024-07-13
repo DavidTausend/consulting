@@ -81,7 +81,7 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 <div align="center"><img src="assets/images/readme/testing/py/consultant.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/manage.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/middleware.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/profolio.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/portfolio.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/settings.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/url.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/view.webp"></div>
@@ -91,7 +91,7 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 The website was tested using the Wave accessibility tool to ensure it meets accessibility standards. This tool helps identify any accessibility issues that might hinder users with disabilities from effectively using the site.
 
-<img src="assets/images/readme/testing/wave.webp" alt="wave validation results">
+<img src="assets/images/readme/testing/wave/wave.webp" alt="wave validation results">
 
 ## Lighthouse Testing
 
