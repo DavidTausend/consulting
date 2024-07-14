@@ -24,9 +24,14 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
       - [Feature Testing](#feature-testing)
     + [Bugs](#bugs)
       - [Known Bugs](#known-bugs)
+        * [Responsive Design Issues on Small Screens](#responsive-design-issues-on-small-screens)
+        * [Image Upload Limits](#image-upload-limits)
       - [Solved Bugs](#solved-bugs)
-- [Paste Your Document In Here](#paste-your-document-in-here)
-  * [And a table of contents](#and-a-table-of-contents)
+      - [Database Connection Error on Heroku](#database-connection-error-on-heroku)
+      - [PEP8 Compliance Errors](#pep8-compliance-errors)
+      - [Empty Button Accessibility Error](#empty-button-accessibility-error)
+      - [HTML Validation Errors](#html-validation-errors)
+      - [Certificate Date Formatting Issue](#certificate-date-formatting-issue)
   * [On the right](#on-the-right)
 
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
@@ -81,7 +86,7 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 <div align="center"><img src="assets/images/readme/testing/py/consultant.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/manage.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/middleware.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/portfolio.webp"></div>
+<div align="center"><img src="assets/images/readme/testing/py/porfolio.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/settings.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/url.webp"></div>
 <div align="center"><img src="assets/images/readme/testing/py/view.webp"></div>

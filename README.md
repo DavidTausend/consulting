@@ -132,7 +132,6 @@ Consulting is a web application designed to showcase a collection of projects th
 - [Testing](#testing)
 - [Credits](#credits)
   * [Content](#content)
-    + [Final Thoughts](#final-thoughts)
     + [Challenges](#challenges)
     + [External Articles and Guides](#external-articles-and-guides)
     + [Community Contributions and Forums](#community-contributions-and-forums)
@@ -242,7 +241,7 @@ GitHub Project Boards were used to manage the project's workflow and track progr
 
 The User Stories List provides an overview of all User Stories, their status, priority, and assignees.
 
-<div align="center"><img src="assets/images/readme/testing/user_stories_list.webp" alt="User Stories List"></div>
+<div align="center"><img src="assets/images/readme/testing/user_story_list.webp" alt="User Stories List"></div>
 
 #### Kanban Board
 
@@ -283,12 +282,33 @@ The Enhancement Milestone includes ongoing improvements and optimizations to the
 
 ## Features
 
-- Responsive Design: Adapts seamlessly to various screen sizes, ensuring a consistent user experience on all devices.
-- Portfolio Section: Displays a curated collection of projects with detailed descriptions and client testimonials.
-- Certificates Section: Showcases certifications with images and detailed descriptions.
-- Contact Form: Allows users to easily reach out for consultations.
-- User Authentication: Secure login and registration functionality for users.
-- Admin Dashboard: Enables easy management of portfolio items, certificates, and user inquiries.
+### Navigation Bar
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+### Hero Section
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+### Social Media Section
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+### Portfolio Section
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+### Certificates Section
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+### About Me Section
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+Contact Form
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+User Authentication
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+Admin Dashboard
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+Booking System
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+Review System
+<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
 
 ## Future Implementations
 
