@@ -68,7 +68,7 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 [W3C CSS Validation Service] (https://jigsaw.w3.org/): The CSS files were validated using the W3C CSS Validator. The validation ensured that the CSS code was well-formed and adheres to the web standards, enhancing the appearance and performance of the website.
 
-<div align="center"><img src="assets/images/readme/testing/css/css.webp"></div>
+<div align="center"><img src="static/images/readme/testing/css/css.webp"></div>
 
 ### Javascript Validation
 
@@ -78,25 +78,25 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 [CI Python Linter](https://pep8ci.herokuapp.com/): The code was validated using the CI Python Linter to ensure it follows PEP8 standards. This helps maintain a clean and consistent codebase, making it easier to read and maintain.
 
-<div align="center"><img src="assets/images/readme/testing/py/admin.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/apps.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/asgi.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/certificates.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/cloudinary.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/consultant.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/manage.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/middleware.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/porfolio.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/settings.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/url.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/view.webp"></div>
-<div align="center"><img src="assets/images/readme/testing/py/wsgi.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/admin.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/apps.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/asgi.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/certificates.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/cloudinary.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/consultant.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/manage.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/middleware.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/porfolio.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/settings.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/url.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/view.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/wsgi.webp"></div>
 
 ### Accessibility
 
 The website was tested using the Wave accessibility tool to ensure it meets accessibility standards. This tool helps identify any accessibility issues that might hinder users with disabilities from effectively using the site.
 
-<img src="assets/images/readme/testing/wave/wave.webp" alt="wave validation results">
+<img src="static/images/readme/testing/wave/wave.webp" alt="wave validation results">
 
 ## Lighthouse Testing
 
@@ -109,86 +109,86 @@ The results from Lighthouse testing showed the following scores:
 Homepage
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/home_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/home_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/home_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/home_mobile.webp">
 
 Portfolio
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/portfolio_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/portfolio_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/portfolio_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/portfolio_mobile.webp">
 
 Certificates
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/cerificates_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/cerificates_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/certicates_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/certicates_mobile.webp">
 
 
 Create a booking
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/create_booking_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/create_booking_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/create_booking_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/create_booking_mobile.webp">
 
 
 Contact
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/contact_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/contact_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/contact_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/contact_mobile.webp">
 
 
 About me
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/about_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/about_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/about_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/about_mobile.webp">
 
 
 Login
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/login_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/login_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/login_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/login_mobile.webp">
 
 
 Bookings
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/bookings_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/bookings_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/bookings_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/bookings_mobile.webp">
 
 
 Update a booking
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/admin_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/admin_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/admin_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/admin_mobile.webp">
 
 
 Submit a review
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/submit_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/submit_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/submit_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/submit_mobile.webp">
 
 Review
 
 - Desktop
-<img src="assets/images/readme/testing/lighthouse/review_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/review_desktop.webp">
 - Mobile
-<img src="assets/images/readme/testing/lighthouse/review_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/review_mobile.webp">
 
 ## Device Testing
 

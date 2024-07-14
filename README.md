@@ -74,7 +74,7 @@ Public ID: ykaf04iw4s0l8wqyy5br
 
 <h1 align="center">Consulting</h1>
 
-<img src="/assets/images/portfolio/consulting.webp" alt="Consulting picture">
+<img src="/static/images/portfolio/consulting.webp" alt="Consulting picture">
 
 <h3 align="center"><a href="https://consulting-d8d637d4e865.herokuapp.com/">➡️ View the live project here ⬅️</a></h3>
 
@@ -183,7 +183,7 @@ Wireframes were created to plan the structure and layout of the website. They pr
 
 #### Entity-Relationship Diagram
 
-<div align="center"><img src="assets/images/readme/testing/erd.webp" alt="Entity-Relationship Diagram"></div>
+<div align="center"><img src="static/images/readme/testing/erd.webp" alt="Entity-Relationship Diagram"></div>
 
 This ERD provides a clear structure of how different entities relate to each other within the project database.
 
@@ -222,7 +222,7 @@ User Stories are short, simple descriptions of a feature told from the perspecti
 13. Homepage Design and Functionality
 14. About Me Section
 
-<div align="center"><img src="assets/images/readme/testing/user_story.webp" alt="User Stories List"></div>
+<div align="center"><img src="static/images/readme/testing/user_story.webp" alt="User Stories List"></div>
 
 #### Tasks
 
@@ -241,13 +241,13 @@ GitHub Project Boards were used to manage the project's workflow and track progr
 
 The User Stories List provides an overview of all User Stories, their status, priority, and assignees.
 
-<div align="center"><img src="assets/images/readme/testing/user_story_list.webp" alt="User Stories List"></div>
+<div align="center"><img src="static/images/readme/testing/user_story_list.webp" alt="User Stories List"></div>
 
 #### Kanban Board
 
 The Kanban Board visualizes the flow of work, showing what is to be done, what is in progress, and what has been completed. This helps in managing tasks efficiently and ensures that the team is focused on the current priorities.
 
-<div align="center"><img src="assets/images/readme/testig/kanban_board.webp" alt="Kanban Board"></div>
+<div align="center"><img src="static/images/readme/testig/kanban_board.webp" alt="Kanban Board"></div>
 
 #### MoSCoW Prioritization
 
@@ -258,7 +258,7 @@ MoSCoW Prioritization was used to categorize the User Stories based on their imp
 - **Could Have**: Nice-to-have features that enhance the user experience.
 - **Won't Have**: Features that are out of scope for the current development cycle.
 
-<div align="center"><img src="assets/images/readme/testing/moscow.webp" alt="MoSCoW Prioritization"></div>
+<div align="center"><img src="static/images/readme/testing/moscow.webp" alt="MoSCoW Prioritization"></div>
 
 #### Story Points and Stars 
 
@@ -283,32 +283,70 @@ The Enhancement Milestone includes ongoing improvements and optimizations to the
 ## Features
 
 ### Navigation Bar
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+The navigation bar provides easy access to various sections of the site, including Home, Portfolio, Certificates, About Me, and Contact pages. It ensures seamless navigation and a consistent user experience.
+
+<div align="center"><img src="static/images/readme/testing/navbar.webp" alt="Navigation Bar"></div>
 
 ### Hero Section
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+The hero section introduces the site with a prominent heading and a call-to-action button. It provides a brief overview of the site's purpose and encourages users to explore further.
+
+<div align="center"><img src="static/images/readme/testing/hero.webp" alt="Hero Section"></div>
 
 ### Social Media Section
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+The social media section includes icons that link to various social media profiles, allowing users to connect and engage through multiple platforms.
+
+<div align="center"><img src="static/images/readme/testing/social_media.webp" alt="Social Media Section"></div>
 
 ### Portfolio Section
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+The portfolio section showcases a collection of projects with detailed descriptions and client testimonials, demonstrating expertise and past work.
+
+<div align="center"><img src="static/images/readme/testing/portfolio.webp" alt="Portfolio Section"></div>
 
 ### Certificates Section
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+The certificates section displays various certifications with images, descriptions, issuing organizations, and dates, highlighting professional qualifications.
+
+<div align="center"><img src="static/images/readme/testing/certificates.webp" alt="Certificates Section"></div>
 
 ### About Me Section
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
-Contact Form
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
-User Authentication
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
-Admin Dashboard
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
-Booking System
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
-Review System
-<div align="center"><img src="assets/images/readme/testing/.webp" alt=""></div>
+
+The about me section provides a detailed biography, sharing personal background, passions, and professional journey, creating a personal connection with visitors.
+
+<div align="center"><img src="static/images/readme/testing/about_me.webp" alt="About Me Section"></div>
+
+### Contact Form
+
+The contact form allows users to easily reach out for consultations, inquiries, or further information. It includes fields for name, email, and message.
+
+<div align="center"><img src="static/images/readme/testing/contact_form.webp" alt="Contact Form"></div>
+
+### User Authentication
+
+The user authentication feature includes secure login and registration functionality, ensuring that only authorized users can access certain sections of the site.
+
+<div align="center"><img src="static/images/readme/testing/user_authentication.webp" alt="User Authentication"></div>
+
+### Admin Dashboard
+
+The admin dashboard provides tools for managing bookings, and user inquiries. It streamlines administrative tasks and content updates.
+
+<div align="center"><img src="static/images/readme/testing/admin_dashboard.webp" alt="Admin Dashboard"></div>
+
+### Booking System
+
+The booking system allows users to schedule consultations with consultants. It includes functionality for creating, viewing, and updating bookings.
+
+<div align="center"><img src="static/images/readme/testing/booking_system.webp" alt="Booking System"></div>
+
+### Review System
+
+The review system enables users to submit, view, edit, and delete reviews for consultants, fostering a transparent and feedback-driven environment.
+
+<div align="center"><img src="static/images/readme/testing/review_system.webp" alt="Review System"></div>
 
 ## Future Implementations
 
