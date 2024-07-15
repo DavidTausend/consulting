@@ -102,6 +102,9 @@ Consulting is a web application designed to showcase a collection of projects th
   * [Typography](#typography)
   * [Color Scheme](#color-scheme)
   * [Wireframes](#wireframes)
+    + [Desktop](#desktop)
+    + [Tablet](#tablet)
+    + [Mobile](#mobile)
     + [Entity-Relationship Diagram](#entity-relationship-diagram)
 - [Agile Workflow](#agile-workflow)
   * [Epics, User Stories and Tasks](#epics--user-stories-and-tasks)
@@ -118,6 +121,17 @@ Consulting is a web application designed to showcase a collection of projects th
     + [Post-MVP Milestone](#post-mvp-milestone)
     + [Enhancement Milestone](#enhancement-milestone)
 - [Features](#features)
+  * [Navigation Bar](#navigation-bar)
+  * [Hero Section](#hero-section)
+  * [Social Media Section](#social-media-section)
+  * [Portfolio Section](#portfolio-section)
+  * [Certificates Section](#certificates-section)
+  * [About Me Section](#about-me-section)
+  * [Contact Form](#contact-form)
+  * [User Authentication](#user-authentication)
+  * [Admin Dashboard](#admin-dashboard)
+  * [Booking System](#booking-system)
+  * [Review System](#review-system)
 - [Future Implementations](#future-implementations)
   * [Programming Languages](#programming-languages)
   * [Applications, Plugins & Tools Used](#applications--plugins---tools-used)
@@ -177,9 +191,17 @@ The color scheme of the project is inspired by a sleek, modern design. The prima
 
 Wireframes were created to plan the structure and layout of the website. They provided a clear visual representation of the user interface, helping to streamline the design and development process. Key wireframes include:
 
-[Desktop]()
-[Tablet]()
-[Mobile]()
+#### Desktop
+
+<div align="center"><img src="static/images/readme/wireframe/desktop.webp" alt="Wireframe Desktop"></div>
+
+#### Tablet
+
+<div align="center"><img src="static/images/readme/wireframe/tablet.webp" alt="Wireframe Tablet"></div>
+
+#### Mobile
+
+<div align="center"><img src="static/images/readme/wireframe/mobile.webp" alt="Wireframe Tablet"></div>
 
 #### Entity-Relationship Diagram
 
@@ -247,7 +269,7 @@ The User Stories List provides an overview of all User Stories, their status, pr
 
 The Kanban Board visualizes the flow of work, showing what is to be done, what is in progress, and what has been completed. This helps in managing tasks efficiently and ensures that the team is focused on the current priorities.
 
-<div align="center"><img src="static/images/readme/testig/kanban_board.webp" alt="Kanban Board"></div>
+<div align="center"><img src="static/images/readme/testing/kanban_board.webp" alt="Kanban Board"></div>
 
 #### MoSCoW Prioritization
 
@@ -328,7 +350,7 @@ The contact form allows users to easily reach out for consultations, inquiries, 
 
 The user authentication feature includes secure login and registration functionality, ensuring that only authorized users can access certain sections of the site.
 
-<div align="center"><img src="static/images/readme/testing/user_authentication.webp" alt="User Authentication"></div>
+<div align="center"><img src="static/images/readme/testing/authentication.webp" alt="User Authentication"></div>
 
 ### Admin Dashboard
 
@@ -340,13 +362,14 @@ The admin dashboard provides tools for managing bookings, and user inquiries. It
 
 The booking system allows users to schedule consultations with consultants. It includes functionality for creating, viewing, and updating bookings.
 
-<div align="center"><img src="static/images/readme/testing/booking_system.webp" alt="Booking System"></div>
+<div align="center"><img src="static/images/readme/testing/booking.webp" alt="Booking System"></div>
+<div align="center"><img src="static/images/readme/testing/view_booking.webp" alt="View Booking"></div>
 
 ### Review System
 
 The review system enables users to submit, view, edit, and delete reviews for consultants, fostering a transparent and feedback-driven environment.
 
-<div align="center"><img src="static/images/readme/testing/review_system.webp" alt="Review System"></div>
+<div align="center"><img src="static/images/readme/testing/review.webp" alt="Review System"></div>
 
 ## Future Implementations
 

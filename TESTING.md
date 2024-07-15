@@ -32,7 +32,6 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
       - [Empty Button Accessibility Error](#empty-button-accessibility-error)
       - [HTML Validation Errors](#html-validation-errors)
       - [Certificate Date Formatting Issue](#certificate-date-formatting-issue)
-  * [On the right](#on-the-right)
 
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
