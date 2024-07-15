@@ -19,6 +19,9 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import cloudinary_storage
+import time
+import psycopg2
+from psycopg2 import OperationalError
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -99,10 +102,23 @@ WSGI_APPLICATION = 'consult.wsgi.application'
 #     }
 # }
 
+def connect_with_retry(db_url, retries=5, delay=2):
+    for i in range(retries):
+        try:
+            conn = psycopg2.connect(db_url)
+            conn.close()  
+            return dj_database_url.parse(db_url)
+        except OperationalError as e:
+            print(f"Connection failed: {e}, retrying in {delay} seconds...")
+            time.sleep(delay)
+            delay *= 2 
+    raise Exception("Failed to connect to the database after multiple attempts")
+
 postgres_url = os.environ.get("POSTGRES")
 print("Postgres URL:", postgres_url)
+
 DATABASES = {
-    'default': dj_database_url.parse(postgres_url)
+    'default': connect_with_retry(postgres_url)
 }
 
 # Password validation
