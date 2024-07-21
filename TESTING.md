@@ -239,89 +239,89 @@ Each User Story was tested to ensure that the corresponding functionality works 
 `Navigation Bar (Desktop)`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Home Link         | Navigates to the home page            | Clicked the "Home" link in the navigation bar | Navigated to the home page    | Pass      |
-| Portfolio Link    | Navigates to the portfolio page       | Clicked the "Portfolio" link in the navigation bar | Navigated to the portfolio page | Pass      |
-| Certificates Link | Navigates to the certificates page    | Clicked the "Certificates" link in the navigation bar | Navigated to the certificates page | Pass      |
-| About Me Link     | Navigates to the about me page        | Clicked the "About Me" link in the navigation bar | Navigated to the about me page | Pass      |
-| Contact Link      | Navigates to the contact page         | Clicked the "Contact" link in the navigation bar | Navigated to the contact page | Pass      |
-| Login/Logout Link | Logs in or out the user               | Clicked the "Login" or "Logout" link in the navigation bar | Logged in or out the user    | Pass      |
+| Home Link         | Navigates to the home page            | Clicked the "Home" link in the navigation bar | Navigated to the home page    | Pass ✅     |
+| Portfolio Link    | Navigates to the portfolio page       | Clicked the "Portfolio" link in the navigation bar | Navigated to the portfolio page | Pass  ✅    |
+| Certificates Link | Navigates to the certificates page    | Clicked the "Certificates" link in the navigation bar | Navigated to the certificates page | Pass ✅     |
+| About Me Link     | Navigates to the about me page        | Clicked the "About Me" link in the navigation bar | Navigated to the about me page | Pass ✅     |
+| Contact Link      | Navigates to the contact page         | Clicked the "Contact" link in the navigation bar | Navigated to the contact page | Pass  ✅    |
+| Login/Logout Link | Logs in or out the user               | Clicked the "Login" or "Logout" link in the navigation bar | Logged in or out the user    | Pass  ✅    |
 
 
 `Navigation Bar (Mobile)`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Menu Button       | Toggles the navigation menu           | Clicked the menu button                | Navigation menu toggled      | Pass      |
-| Home Link         | Navigates to the home page            | Clicked the "Home" link in the navigation menu | Navigated to the home page    | Pass      |
-| Portfolio Link    | Navigates to the portfolio page       | Clicked the "Portfolio" link in the navigation menu | Navigated to the portfolio page | Pass      |
-| Certificates Link | Navigates to the certificates page    | Clicked the "Certificates" link in the navigation menu | Navigated to the certificates page | Pass      |
-| About Me Link     | Navigates to the about me page        | Clicked the "About Me" link in the navigation menu | Navigated to the about me page | Pass      |
-| Contact Link      | Navigates to the contact page         | Clicked the "Contact" link in the navigation menu | Navigated to the contact page | Pass      |
-| Login/Logout Link | Logs in or out the user               | Clicked the "Login" or "Logout" link in the navigation menu | Logged in or out the user    | Pass      |
+| Menu Button       | Toggles the navigation menu           | Clicked the menu button                | Navigation menu toggled      | Pass ✅     |
+| Home Link         | Navigates to the home page            | Clicked the "Home" link in the navigation menu | Navigated to the home page    | Pass ✅     |
+| Portfolio Link    | Navigates to the portfolio page       | Clicked the "Portfolio" link in the navigation menu | Navigated to the portfolio page | Pass ✅     |
+| Certificates Link | Navigates to the certificates page    | Clicked the "Certificates" link in the navigation menu | Navigated to the certificates page | Pass ✅     |
+| About Me Link     | Navigates to the about me page        | Clicked the "About Me" link in the navigation menu | Navigated to the about me page | Pass ✅     |
+| Contact Link      | Navigates to the contact page         | Clicked the "Contact" link in the navigation menu | Navigated to the contact page | Pass ✅     |
+| Login/Logout Link | Logs in or out the user               | Clicked the "Login" or "Logout" link in the navigation menu | Logged in or out the user    | Pass ✅     |
 
 `Hero Section`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Heading             | Displays the main heading            | Viewed the hero section             | Main heading is displayed        | Pass      |
-| Subheading          | Displays the subheading              | Viewed the hero section             | Subheading is displayed          | Pass      |
-| Call to Action Button | Navigates to the portfolio page    | Clicked the "Portfolio" button      | Navigated to the portfolio page  | Pass      |
-| Background Image    | Displays the background image correctly | Viewed the hero section          | Background image is displayed correctly | Pass      |
+| Heading             | Displays the main heading            | Viewed the hero section             | Main heading is displayed        | Pass ✅     |
+| Subheading          | Displays the subheading              | Viewed the hero section             | Subheading is displayed          | Pass  ✅    |
+| Call to Action Button | Navigates to the portfolio page    | Clicked the "Portfolio" button      | Navigated to the portfolio page  | Pass  ✅    |
+| Background Image    | Displays the background image correctly | Viewed the hero section          | Background image is displayed correctly | Pass  ✅    |
 
 `Social Media Section`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Social Media Icons | Displays social media icons           | Viewed the social media section     | Social media icons are displayed | Pass      |
-| Links to Social Media Pages | Navigates to the correct social media page | Clicked each social media icon | Navigated to the correct social media page | Pass      |
+| Social Media Icons | Displays social media icons           | Viewed the social media section     | Social media icons are displayed | Pass  ✅    |
+| Links to Social Media Pages | Navigates to the correct social media page | Clicked each social media icon | Navigated to the correct social media page | Pass ✅     |
 
 `Portfolio Section`
-| Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Portfolio Items  | Displays all portfolio items with title, description, image, and testimonial | Viewed the portfolio section | All portfolio items displayed correctly | Pass      |
-| Portfolio Item Details | Displays detailed information of a portfolio item when clicked | Clicked on a portfolio item | Detailed information displayed correctly | Pass      |
+| Portfolio Items  | Displays all portfolio items with title, description, image, and testimonial | Viewed the portfolio section | All portfolio items displayed correctly | Pass  ✅    |
+| Portfolio Item Details | Displays detailed information of a portfolio item when clicked | Clicked on a portfolio item | Detailed information displayed correctly | Pass  ✅    |
 
 `Certificates Section`
-| Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Certificates Items | Displays all certificates with title, description, image, issuing organization, and dates | Viewed the certificates section | All certificate items displayed correctly | Pass      |
-| Certificate Item Details | Displays detailed information of a certificate when clicked | Clicked on a certificate item | Detailed information displayed correctly | Pass      |
+| Certificates Items | Displays all certificates with title, description, image, issuing organization, and dates | Viewed the certificates section | All certificate items displayed correctly | Pass ✅     |
+| Certificate Item Details | Displays detailed information of a certificate when clicked | Clicked on a certificate item | Detailed information displayed correctly | Pass  ✅    |
 
 `About Me Section`
-| Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Bio Information  | Displays the bio information correctly    | Viewed the about me section           | Bio information displayed correctly | Pass      |
+| Bio Information  | Displays the bio information correctly    | Viewed the about me section           | Bio information displayed correctly | Pass ✅     |
 
 `Contact Form`
-| Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Form Fields      | Displays name, email, and message fields  | Viewed the contact form               | All fields displayed correctly | Pass      |
-| Form Submission  | Submits the form and shows a confirmation message | Filled out and submitted the form | Form submitted and confirmation message displayed | Pass      |
+| Form Fields      | Displays name, email, and message fields  | Viewed the contact form               | All fields displayed correctly | Pass ✅     |
+| Form Submission  | Submits the form and shows a confirmation message | Filled out and submitted the form | Form submitted and confirmation message displayed | Pass ✅     |
 
 `User Authentication`
-| Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Registration     | Allows new users to register              | Filled out and submitted the registration form | User registered successfully | Pass      |
-| Login            | Allows users to log in                    | Filled out and submitted the login form | User logged in successfully | Pass      |
-| Logout           | Allows users to log out                   | Clicked the logout link              | User logged out successfully | Pass      |
+| Registration     | Allows new users to register              | Filled out and submitted the registration form | User registered successfully | Pass  ✅    |
+| Login            | Allows users to log in                    | Filled out and submitted the login form | User logged in successfully | Pass ✅     |
+| Logout           | Allows users to log out                   | Clicked the logout link              | User logged out successfully | Pass ✅     |
 
 `Admin Dashboard`
- Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Dashboard Access | Allows admin to access the dashboard      | Logged in as admin and accessed the dashboard | Dashboard accessed successfully | Pass      |
-| Manage Bookings  | Allows admin to manage bookings           | Viewed and edited bookings in the dashboard | Bookings managed successfully | Pass      |
+| Dashboard Access | Allows admin to access the dashboard      | Logged in as admin and accessed the dashboard | Dashboard accessed successfully | Pass  ✅    |
+| Manage Bookings  | Allows admin to manage bookings           | Viewed and edited bookings in the dashboard | Bookings managed successfully | Pass  ✅    |
 
 `Booking System`
-| Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Create Booking   | Allows users to create a booking          | Filled out and submitted the booking form | Booking created successfully | Pass      |
-| View Bookings    | Allows users to view their bookings       | Accessed the bookings page           | Bookings displayed correctly | Pass      |
-| Update Booking Status | Allows admin to update booking status | Changed the status of a booking     | Booking status updated successfully | Pass      |
+| Create Booking   | Allows users to create a booking          | Filled out and submitted the booking form | Booking created successfully | Pass ✅     |
+| View Bookings    | Allows users to view their bookings       | Accessed the bookings page           | Bookings displayed correctly | Pass ✅     |
+| Update Booking Status | Allows admin to update booking status | Changed the status of a booking     | Booking status updated successfully | Pass ✅     |
 
 `Review System`
-| Feature          | Expected Outcome                          | Testing Performed                     | Result                         | Pass/Fail |
+|Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Submit Review    | Allows users to submit reviews            | Filled out and submitted the review form | Review submitted successfully | Pass      |
-| View Reviews     | Allows users to view reviews              | Accessed the reviews page            | Reviews displayed correctly    | Pass      |
-| Edit Review      | Allows users to edit their reviews        | Edited an existing review            | Review edited successfully     | Pass      |
-| Delete Review    | Allows users to delete their reviews      | Deleted an existing review           | Review deleted successfully    | Pass      |
+| Submit Review    | Allows users to submit reviews            | Filled out and submitted the review form | Review submitted successfully | Pass  ✅    |
+| View Reviews     | Allows users to view reviews              | Accessed the reviews page            | Reviews displayed correctly    | Pass  ✅    |
+| Edit Review      | Allows users to edit their reviews        | Edited an existing review            | Review edited successfully     | Pass  ✅    |
+| Delete Review    | Allows users to delete their reviews      | Deleted an existing review           | Review deleted successfully    | Pass   ✅   |
 
 <br>
 

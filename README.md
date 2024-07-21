@@ -308,68 +308,68 @@ The Enhancement Milestone includes ongoing improvements and optimizations to the
 
 The navigation bar provides easy access to various sections of the site, including Home, Portfolio, Certificates, About Me, and Contact pages. It ensures seamless navigation and a consistent user experience.
 
-<div align="center"><img src="static/images/readme/testing/navbar.webp" alt="Navigation Bar"></div>
+<div align="center"><img src="static/images/readme/features/navbar.webp" alt="Navigation Bar"></div>
 
 ### Hero Section
 
 The hero section introduces the site with a prominent heading and a call-to-action button. It provides a brief overview of the site's purpose and encourages users to explore further.
 
-<div align="center"><img src="static/images/readme/testing/hero.webp" alt="Hero Section"></div>
+<div align="center"><img src="static/images/readme/features/hero.webp" alt="Hero Section"></div>
 
 ### Social Media Section
 
 The social media section includes icons that link to various social media profiles, allowing users to connect and engage through multiple platforms.
 
-<div align="center"><img src="static/images/readme/testing/social_media.webp" alt="Social Media Section"></div>
+<div align="center"><img src="static/images/readme/features/social_media.webp" alt="Social Media Section"></div>
 
 ### Portfolio Section
 
 The portfolio section showcases a collection of projects with detailed descriptions and client testimonials, demonstrating expertise and past work.
 
-<div align="center"><img src="static/images/readme/testing/portfolio.webp" alt="Portfolio Section"></div>
+<div align="center"><img src="static/images/readme/features/portfolio.webp" alt="Portfolio Section"></div>
 
 ### Certificates Section
 
 The certificates section displays various certifications with images, descriptions, issuing organizations, and dates, highlighting professional qualifications.
 
-<div align="center"><img src="static/images/readme/testing/certificates.webp" alt="Certificates Section"></div>
+<div align="center"><img src="static/images/readme/features/certificates.webp" alt="Certificates Section"></div>
 
 ### About Me Section
 
 The about me section provides a detailed biography, sharing personal background, passions, and professional journey, creating a personal connection with visitors.
 
-<div align="center"><img src="static/images/readme/testing/about_me.webp" alt="About Me Section"></div>
+<div align="center"><img src="static/images/readme/features/about_me.webp" alt="About Me Section"></div>
 
 ### Contact Form
 
 The contact form allows users to easily reach out for consultations, inquiries, or further information. It includes fields for name, email, and message.
 
-<div align="center"><img src="static/images/readme/testing/contact_form.webp" alt="Contact Form"></div>
+<div align="center"><img src="static/images/readme/features/contact_form.webp" alt="Contact Form"></div>
 
 ### User Authentication
 
 The user authentication feature includes secure login and registration functionality, ensuring that only authorized users can access certain sections of the site.
 
-<div align="center"><img src="static/images/readme/testing/authentication.webp" alt="User Authentication"></div>
+<div align="center"><img src="static/images/readme/features/authentication.webp" alt="User Authentication"></div>
 
 ### Admin Dashboard
 
 The admin dashboard provides tools for managing bookings, and user inquiries. It streamlines administrative tasks and content updates.
 
-<div align="center"><img src="static/images/readme/testing/admin_dashboard.webp" alt="Admin Dashboard"></div>
+<div align="center"><img src="static/images/readme/features/admin_dashboard.webp" alt="Admin Dashboard"></div>
 
 ### Booking System
 
 The booking system allows users to schedule consultations with consultants. It includes functionality for creating, viewing, and updating bookings.
 
-<div align="center"><img src="static/images/readme/testing/booking.webp" alt="Booking System"></div>
-<div align="center"><img src="static/images/readme/testing/view_booking.webp" alt="View Booking"></div>
+<div align="center"><img src="static/images/readme/features/booking.webp" alt="Booking System"></div>
+<div align="center"><img src="static/images/readme/features/view_booking.webp" alt="View Booking"></div>
 
 ### Review System
 
 The review system enables users to submit, view, edit, and delete reviews for consultants, fostering a transparent and feedback-driven environment.
 
-<div align="center"><img src="static/images/readme/testing/review.webp" alt="Review System"></div>
+<div align="center"><img src="static/images/readme/features/review.webp" alt="Review System"></div>
 
 ## Future Implementations
 
