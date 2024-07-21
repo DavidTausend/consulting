@@ -122,9 +122,9 @@ Portfolio
 Certificates
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/cerificates_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/cerificate_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/certicates_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/certicate_mobile.webp">
 
 
 Create a booking
