@@ -45,17 +45,18 @@ ALLOWED_HOSTS = [
 ]
 
 # Application definition
-
+# add Auth
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'accounts',
     'cloudinary',
-    'cloudinary_storage',
+    
 ]
 
 MIDDLEWARE = [
@@ -102,23 +103,13 @@ WSGI_APPLICATION = 'consult.wsgi.application'
 #     }
 # }
 
-def connect_with_retry(db_url, retries=5, delay=2):
-    for i in range(retries):
-        try:
-            conn = psycopg2.connect(db_url)
-            conn.close()  
-            return dj_database_url.parse(db_url)
-        except OperationalError as e:
-            print(f"Connection failed: {e}, retrying in {delay} seconds...")
-            time.sleep(delay)
-            delay *= 2 
-    raise Exception("Failed to connect to the database after multiple attempts")
 
 postgres_url = os.environ.get("POSTGRES")
 print("Postgres URL:", postgres_url)
 
+## Change to dj database
 DATABASES = {
-    'default': connect_with_retry(postgres_url)
+    'default': dj_database_url.parse(os.environ.get('POSTGRES'))
 }
 
 # Password validation
