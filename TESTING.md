@@ -60,6 +60,7 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 |[Bookings](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fbookings%2F)|pass|
 
 |[Update a booking]()|pass|
+<div align="center"><img src="static/images/readme/testing/html/update_booking.webp"></div>
 
 |[Submit a review](https://consulting-d8d637d4e865.herokuapp.com/consultants/1/reviews/submit/)|pass|
 
