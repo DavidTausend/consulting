@@ -15,25 +15,33 @@
 <div class="container text-center">
     <img src="{% static 'images/cloud.webp' %}" alt="Your Image" class="img-fluid my-4">
     <div class="row">
-        <div class="col-md-4">
-            <h2>Our Services</h2>
-            <p>We provide a wide range of consulting services tailored to your needs.</p>
-            <a class="btn btn-secondary" href="{% url 'accounts:portfolio_list' %}" role="button">Learn More »</a>
+        <div class="col-md-6">
+            <div class="service-box">
+                <h2>Our Services</h2>
+                <p>We provide a wide range of consulting services tailored to your needs.</p>
+                <a class="btn btn-secondary" href="{% url 'accounts:portfolio_list' %}" role="button">Learn More »</a>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Book a Consultation</h2>
-            <p>Schedule a consultation at your convenience.</p>
-            <a class="btn btn-secondary" href="{% url 'accounts:create_booking' %}" role="button">Book Now »</a>
+        <div class="col-md-6">
+            <div class="service-box">
+                <h2>Book a Consultation</h2>
+                <p>Schedule a consultation at your convenience.</p>
+                <a class="btn btn-secondary" href="{% url 'accounts:create_booking' %}" role="button">Book Now »</a>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Contact Us</h2>
-            <p>Have questions? Get in touch with us for more information.</p>
-            <a class="btn btn-secondary" href="{% url 'accounts:contact' %}" role="button">Contact Us »</a>
+        <div class="col-md-6">
+            <div class="service-box">
+                <h2>Contact Us</h2>
+                <p>Have questions? Get in touch with us for more information.</p>
+                <a class="btn btn-secondary" href="{% url 'accounts:contact' %}" role="button">Contact Us »</a>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>View Reviews</h2>
-            <p>See what others have to say about our services.</p>
-            <a class="btn btn-secondary" href="{% url 'accounts:view_reviews' consultant_id=1 %}" role="button">View Reviews »</a>
+        <div class="col-md-6">
+            <div class="service-box">
+                <h2>View Reviews</h2>
+                <p>See what others have to say about our services.</p>
+                <a class="btn btn-secondary" href="{% url 'accounts:view_reviews' consultant_id=1 %}" role="button">View Reviews »</a>
+            </div>
         </div>
     </div>
 </div>

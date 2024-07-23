@@ -83,7 +83,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container .row .col-md-4 {
+.container .service-box {
     background-color: #fff;
     padding: 20px;
     margin: 10px 0;
@@ -93,6 +93,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
 .btn-container {
