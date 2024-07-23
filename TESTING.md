@@ -123,9 +123,9 @@ Portfolio
 Certificates
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/cerificate_desktop.webp">
+<img src="static/images/readme/testing/lighthouse/certificate_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/certicate_mobile.webp">
+<img src="static/images/readme/testing/lighthouse/certificate_mobile.webp">
 
 
 Create a booking
