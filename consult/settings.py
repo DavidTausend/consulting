@@ -19,9 +19,6 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import cloudinary_storage
-import time
-import psycopg2
-from psycopg2 import OperationalError
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,7 +33,7 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
@@ -45,7 +42,6 @@ ALLOWED_HOSTS = [
 ]
 
 # Application definition
-# add Auth
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,7 +52,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'cloudinary',
-    
 ]
 
 MIDDLEWARE = [
@@ -96,20 +91,9 @@ WSGI_APPLICATION = 'consult.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
-postgres_url = os.environ.get("POSTGRES")
-print("Postgres URL:", postgres_url)
-
-## Change to dj database
+postgres_url = os.getenv("POSTGRES")
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('POSTGRES'))
+    'default': dj_database_url.parse(postgres_url)
 }
 
 # Password validation
@@ -164,9 +148,11 @@ STATICFILES_DIRS = [
 ]
 
 # Cloudinary settings
-CLOUDINARY_STORAGE = {
-    'CLOUDINARY': os.environ.get('CLOUDINARY_URL')
-}
+cloudinary.config(
+    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
+    api_key=os.getenv('CLOUDINARY_API_KEY'),
+    api_secret=os.getenv('CLOUDINARY_API_SECRET')
+)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
