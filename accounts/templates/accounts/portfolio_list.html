@@ -9,7 +9,7 @@
     {% for portfolio in portfolios %}
         <div class="portfolio-item">
             <img src="https://res.cloudinary.com/djvvb5zxr/image/upload/{{ portfolio.image }}.webp" 
-                 alt="{{ portfolio.title }}">
+                 alt="{{ portfolio.title }}" loading="lazy">
             <h3>{{ portfolio.title }}</h3>
             <p>{{ portfolio.description }}</p>
             {% if portfolio.client_testimonial %}

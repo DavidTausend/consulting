@@ -164,7 +164,6 @@ a:hover {
 .portfolio-item {
     text-align: center;
     width: calc(33.333% - 20px);
-    background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;

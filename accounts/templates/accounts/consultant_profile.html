@@ -7,7 +7,7 @@
     <p><strong>Bio:</strong> {{ consultant.bio }}</p>
     <p><strong>Specialties:</strong> {{ consultant.specialties }}</p>
     {% if consultant.profile_picture %}
-        <img src="{{ consultant.profile_picture.url }}" alt="Profile Picture">
+        <img src="{{ consultant.profile_picture.url }}" alt="Profile Picture" loading="lazy">
     {% else %}
         <p>No profile picture available.</p>
     {% endif %}
