@@ -4,18 +4,12 @@
 {% block title %}Our Portfolio{% endblock %}
 
 {% block content %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
 <h1>Portfolio</h1>
 <div class="portfolio-gallery">
     {% for portfolio in portfolios %}
         <div class="portfolio-item">
-            <img src="https://res.cloudinary.com/djvvb5zxr/image/upload/c_scale,w_10/{{ portfolio.image }}.webp" 
-                 data-src="https://res.cloudinary.com/djvvb5zxr/image/upload/{{ portfolio.image }}.webp"
-                 alt="{{ portfolio.title }}" 
-                 loading="lazy"
-                 width="{{ portfolio.image_width }}"
-                 height="{{ portfolio.image_height }}"
-                 class="lazyload">
+            <img src="https://res.cloudinary.com/djvvb5zxr/image/upload/{{ portfolio.image }}.webp" 
+                 alt="{{ portfolio.title }}" loading="lazy">
             <h3>{{ portfolio.title }}</h3>
             <p>{{ portfolio.description }}</p>
             {% if portfolio.client_testimonial %}
