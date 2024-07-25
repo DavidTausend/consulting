@@ -18,7 +18,6 @@ class Command(BaseCommand):
                         print(f"URL: {response['url']}")
                         print(f"Public ID: {response['public_id']}")
 
-                        # Create or update the database record
                         defaults = {field_name: response['public_id']}
                         defaults.update(extra_fields)
                         model.objects.update_or_create(
@@ -27,7 +26,6 @@ class Command(BaseCommand):
             else:
                 print(f"Directory {folder} does not exist.")
 
-        # Define the folders to upload
         folders_to_upload = [
             {
                 'folder': os.path.join(
@@ -47,7 +45,7 @@ class Command(BaseCommand):
                 'extra_fields': {
                     'date_of_issuance': '2023-01-01'
                 }
-            },  # Example date
+            },
         ]
 
         for folder_info in folders_to_upload:
