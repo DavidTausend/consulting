@@ -3,11 +3,12 @@ import cloudinary.uploader
 from django.core.management.base import BaseCommand
 from accounts.models import Portfolio, Certificate
 
+
 class Command(BaseCommand):
     help = 'Upload images to Cloudinary and save their details in the db.'
 
     def handle(self, *args, **kwargs):
-        def upload_images_to_folder(folder, model, field_name, extra_fields={}):
+        def upload_images_folder(folder, model, field_name, extra_fields={}):
             if os.path.exists(folder):
                 for filename in os.listdir(folder):
                     if filename.endswith(('.webp')):
