@@ -3,7 +3,6 @@ import cloudinary.uploader
 from django.core.management.base import BaseCommand
 from accounts.models import Portfolio, Certificate
 
-
 class Command(BaseCommand):
     help = 'Upload images to Cloudinary and save their details in the db.'
 
@@ -43,14 +42,14 @@ class Command(BaseCommand):
                 'model': Certificate,
                 'field_name': 'image',
                 'extra_fields': {
-                    'date_of_issuance': '2023-01-01'
+                    'date_issued': '2023-01-01'
                 }
             },
         ]
 
         for folder_info in folders_to_upload:
             print(f"Processing folder: {folder_info['folder']}")
-            upload_images_from_folder(
+            upload_images_to_folder(
                 folder_info['folder'],
                 folder_info['model'],
                 folder_info['field_name'],
