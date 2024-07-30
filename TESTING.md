@@ -91,6 +91,8 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 <div align="center"><img src="static/images/readme/testing/py/url.webp"></div>
 <div align="center"><img src="static/images/readme/testing/py/view.webp"></div>
 <div align="center"><img src="static/images/readme/testing/py/wsgi.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/test_models.webp"></div>
+<div align="center"><img src="static/images/readme/testing/py/test_views.webp"></div>
 
 ### Accessibility
 
