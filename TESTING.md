@@ -7,6 +7,8 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 - [Testing Documentation](#testing-documentation)
   * [Table of Contents](#table-of-contents)
     + [Automated Testing](#automated-testing)
+      - [Model Tests](#model-tests)
+      - [View Tests](#view-tests)
       - [Validator Testing](#validator-testing)
         * [HTML Validation](#html-validation)
       - [CSS Validation](#css-validation)
@@ -36,6 +38,16 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
 ### Automated Testing
+
+Automated testing plays a crucial role in ensuring the reliability and functionality of the application. The project utilizes Django's testing framework to implement unit tests for models and views. Below is an overview of the tests included in the project.
+
+#### Model Tests
+
+The `test_models` module contains unit tests for the application's models. These tests validate the behavior and integrity of the database models used within the application.
+
+#### View Tests
+
+The `test_views` module contains tests for the application's views. These tests ensure that each view returns the correct response and renders the appropriate templates.
 
 #### Validator Testing
 

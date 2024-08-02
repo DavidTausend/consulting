@@ -158,13 +158,10 @@ User Stories are short, simple descriptions of a feature told from the perspecti
 1. **User Registration and Authentication**
    - **Feature**: [User Authentication](#user-authentication)
      - Provides secure login and registration functionality to ensure only authorized users can access certain sections of the site.
-     - ![User Authentication](static/images/readme/features/authentication.webp)
 
 2. **Booking System**
    - **Feature**: [Booking System](#booking-system)
      - Allows users to schedule consultations with consultants, including functionality for creating, viewing, and updating bookings.
-     - ![Booking System](static/images/readme/features/booking.webp)
-     - ![View Booking](static/images/readme/features/view_booking.webp)
 
 3. **Consultant Profiles**
    - **Feature**: [Consultant Profiles in Portfolio Section](#portfolio-section)
@@ -173,15 +170,13 @@ User Stories are short, simple descriptions of a feature told from the perspecti
 4. **Contact Information and Inquiry Form**
    - **Feature**: [Contact Form](#contact-form)
      - Allows users to easily reach out for consultations, inquiries, or further information.
-     - ![Contact Form](static/images/readme/features/contact_form.webp)
 
 5. **Advanced Search and Filters for Consultations**
    - **Feature**: [Advanced Search and Filters](#admin-dashboard)
      - Includes tools for searching and filtering consultations effectively within the admin dashboard.
-     - ![Admin Dashboard](static/images/readme/features/admin_dashboard.webp)
 
 6. **Secure Payment System**
-   - **Feature**: Integration for secure payments (implementation details not included in the document).
+   - **Feature**: Integration for secure payments (To be implemented in the future).
 
 7. **Real-time Notifications**
    - **Feature**: (To be implemented in the future).
@@ -189,36 +184,29 @@ User Stories are short, simple descriptions of a feature told from the perspecti
 8. **Admin Dashboard for Bookings Management**
    - **Feature**: [Admin Dashboard](#admin-dashboard)
      - Provides tools for managing bookings and user inquiries, streamlining administrative tasks.
-     - ![Admin Dashboard](static/images/readme/features/admin_dashboard.webp)
 
 9. **User Reviews and Feedback System**
    - **Feature**: [Review System](#review-system)
      - Enables users to submit, view, edit, and delete reviews for consultants, fostering a feedback-driven environment.
-     - ![Review System](static/images/readme/features/review.webp)
 
 10. **Accessibility and Mobile Responsiveness**
     - **Feature**: Responsive design implemented across all sections, ensuring accessibility and usability on various devices.
 
 11. **Portfolio Section**
     - **Feature**: [Portfolio Section](#portfolio-section)
-      - Showcases a collection of projects with detailed descriptions and client testimonials.
-      - ![Portfolio Section](static/images/readme/features/portfolio.webp)
+      - Showcases a collection of projects with detailed descriptions.
 
 12. **Certificates Section**
     - **Feature**: [Certificates Section](#certificates-section)
       - Displays various certifications with images, descriptions, issuing organizations, and dates.
-      - ![Certificates Section](static/images/readme/features/certificates.webp)
 
 13. **Homepage Design and Functionality**
     - **Feature**: [Hero Section](#hero-section) and [Navigation Bar](#navigation-bar)
       - Provides a welcoming introduction with seamless navigation across the site.
-      - ![Hero Section](static/images/readme/features/hero.webp)
-      - ![Navigation Bar](static/images/readme/features/navbar.webp)
 
 14. **About Me Section**
     - **Feature**: [About Me Section](#about-me-section)
       - Provides a detailed biography, sharing personal background, passions, and professional journey.
-      - ![About Me Section](static/images/readme/features/about_me.webp)
 
 <div align="center"><img src="static/images/readme/testing/user_story.webp" alt="User Stories List"></div>
 
