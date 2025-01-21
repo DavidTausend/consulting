@@ -11,6 +11,10 @@
         <div>
             <a href="{% url 'accounts:update_booking_status' booking.id %}" class="btn btn-secondary btn-sm">Update Status</a>
             <a href="{% url 'accounts:submit_review' booking.consultant.id %}" class="btn btn-primary btn-sm ml-2">Leave a Review</a>
+            <form action="{% url 'accounts:delete_booking' booking.id %}" method="POST" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm ml-2">Delete Booking</button>
+            </form>
         </div>
     </li>
     {% endfor %}

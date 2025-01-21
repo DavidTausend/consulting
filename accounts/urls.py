@@ -68,4 +68,6 @@ urlpatterns = [
     path('certificates/', views.certificate_list, name='certificate_list'),
     path('about_me/', views.about_me, name='about_me'),
     path('', views.home, name='home'),
+    path('delete_review/<int:review_id>/', views.delete_review, name='delete_review'),
+    path('delete_booking/<int:booking_id>/', views.delete_booking, name='delete_booking'),
 ]

@@ -9,6 +9,10 @@
         <p>{{ review.comments }}</p>
         {% if review.user == user %}
         <a href="{% url 'accounts:edit_review' review.id %}" class="btn btn-secondary">Edit Review</a>
+        <form action="{% url 'accounts:delete_review' review.id %}" method="POST" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete Review</button>
+        </form>
         {% endif %}
     </li>
     {% endfor %}

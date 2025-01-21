@@ -199,6 +199,20 @@ def update_booking_status(request, booking_id):
     return response
 
 
+# Update booking
+@login_required
+def update_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, client=request.user)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts:booking_list')
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'accounts/update_booking.html', {'form': form})
+    
+
 # User Reviews and Feedback System
 @login_required
 def submit_review(request, consultant_id):
@@ -294,6 +308,21 @@ def certificate_list(request):
     )
     connection.close()
     return response
+
+
+# Deleting Reviews
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id, user=request.user)
+    review.delete()
+    return redirect('accounts:view_reviews', consultant_id=review.consultant.id)
+
+# Deleting Booking
+@login_required
+def delete_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, client=request.user)
+    booking.delete()
+    return redirect('accounts:booking_list')
 
 
 def about_me(request):

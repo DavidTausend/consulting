@@ -39,7 +39,23 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 ### Automated Testing
 
-Automated testing plays a crucial role in ensuring the reliability and functionality of the application. The project utilizes Django's testing framework to implement unit tests for models and views. Below is an overview of the tests included in the project.
+Automated tests are implemented to ensure that the core features of the application work as expected and to catch any potential bugs. The following modules are tested:
+
+- **test_models**: Covers the functionality of models such as `Consultant`, `Booking`, `Inquiry`, `Review`, `Portfolio`, and `Certificate`. This includes validation of relationships, constraints, and data integrity.
+
+- **test_views**: Tests the behavior of each view, ensuring that the correct templates are rendered, appropriate data is passed, and CRUD operations are fully functional on the frontend.
+
+#### Example Test Cases
+
+1. **Home View Test**: Verifies that the home page loads successfully and uses the correct template.
+2. **Register View Test**: Confirms that users can access the registration page without errors.
+3. **Create Booking View Test**: Ensures the booking form page loads and is functional.
+4. **Review System Tests**: Includes tests for creating, viewing, editing, and deleting reviews, ensuring that users have full control over their feedback.
+5. **Contact Form Test**: Checks that the contact form is accessible and submits successfully.
+
+To run the tests, use the following command:
+
+`python manage.py test`
 
 #### Model Tests
 

@@ -13,4 +13,5 @@
     {% endif %}
 </div>
 <a href="{% url 'accounts:submit_review' consultant.id %}" class="btn btn-primary">Leave a Review</a>
+<a href="{% url 'accounts:view_reviews' consultant.id %}" class="btn btn-secondary ml-2">Manage Reviews</a>
 {% endblock %}
