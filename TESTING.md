@@ -1,33 +1,35 @@
 # Testing Documentation
 
+This document outlines the automated tests implemented in the project, the purpose of each test, and how to run them.
+
 Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/)
 
 ## Table of Contents
 
 - [Testing Documentation](#testing-documentation)
-  * [Table of Contents](#table-of-contents)
-    + [Automated Testing](#automated-testing)
+  - [Table of Contents](#table-of-contents)
+    - [Automated Testing](#automated-testing)
       - [Model Tests](#model-tests)
       - [View Tests](#view-tests)
       - [Validator Testing](#validator-testing)
-        * [HTML Validation](#html-validation)
+        - [HTML Validation](#html-validation)
       - [CSS Validation](#css-validation)
-    + [Javascript Validation](#javascript-validation)
+    - [Javascript Validation](#javascript-validation)
       - [PEP8 Validation](#pep8-validation)
-    + [Accessibility](#accessibility)
-  * [Lighthouse Testing](#lighthouse-testing)
-    + [Lighthouse Results](#lighthouse-results)
-  * [Device Testing](#device-testing)
-    + [Devices](#devices)
-    + [Browsers](#browsers)
-    + [Responsiveness](#responsiveness)
-    + [Manual testing](#manual-testing)
+    - [Accessibility](#accessibility)
+  - [Lighthouse Testing](#lighthouse-testing)
+    - [Lighthouse Results](#lighthouse-results)
+  - [Device Testing](#device-testing)
+    - [Devices](#devices)
+    - [Browsers](#browsers)
+    - [Responsiveness](#responsiveness)
+    - [Manual testing](#manual-testing)
       - [User Stories Testing](#user-stories-testing)
       - [Feature Testing](#feature-testing)
-    + [Bugs](#bugs)
+    - [Bugs](#bugs)
       - [Known Bugs](#known-bugs)
-        * [Responsive Design Issues on Small Screens](#responsive-design-issues-on-small-screens)
-        * [Image Upload Limits](#image-upload-limits)
+        - [Responsive Design Issues on Small Screens](#responsive-design-issues-on-small-screens)
+        - [Image Upload Limits](#image-upload-limits)
       - [Solved Bugs](#solved-bugs)
       - [Database Connection Error on Heroku](#database-connection-error-on-heroku)
       - [PEP8 Compliance Errors](#pep8-compliance-errors)
@@ -37,10 +39,43 @@ Visit the deployed site: [Commit](https://news-bytes-f757f042ac64.herokuapp.com/
 
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
+## Automated Testing Overview
+
+This project uses Django's built-in `unittest` framework to validate the functionality of key features, focusing on views, forms, and access control.
+
+### View Testing
+
+| **Test Case**                            | **Purpose**                                                    | **Expected Outcome**               | **Status** |
+| ---------------------------------------- | -------------------------------------------------------------- | ---------------------------------- | ---------- |
+| `test_home_view`                         | Ensure home page loads successfully                            | Status code 200 & correct template | ✅ Pass    |
+| `test_register_view`                     | Verify user can access registration page                       | Status code 200 & correct template | ✅ Pass    |
+| `test_create_booking_view`               | Check booking form page loads correctly                        | Status code 200 & correct template | ✅ Pass    |
+| `test_create_booking_submission`         | Validate booking form submission                               | Successful submission & redirect   | ✅ Pass    |
+| `test_booking_list_view`                 | Confirm bookings list is accessible for logged-in users        | Status code 200 & correct template | ✅ Pass    |
+| `test_booking_list_view_unauthenticated` | Ensure unauthenticated users are redirected from bookings page | Redirect to login page             | ✅ Pass    |
+| `test_consultant_list_view`              | Verify consultant list loads correctly                         | Status code 200 & correct template | ✅ Pass    |
+| `test_consultant_profile_view`           | Check consultant profile page renders                          | Status code 200 & correct template | ✅ Pass    |
+| `test_invalid_consultant_profile_view`   | Validate 404 error for non-existent consultant profiles        | Status code 404                    | ✅ Pass    |
+| `test_contact_view`                      | Confirm contact form page loads                                | Status code 200 & correct template | ✅ Pass    |
+| `test_contact_confirmation_view`         | Verify contact confirmation page displays                      | Status code 200 & correct template | ✅ Pass    |
+| `test_portfolio_list_view`               | Ensure portfolio list is displayed                             | Status code 200 & correct template | ✅ Pass    |
+| `test_certificate_list_view`             | Confirm certificates page loads correctly                      | Status code 200 & correct template | ✅ Pass    |
+| `test_about_me_view`                     | Validate About Me page renders properly                        | Status code 200 & correct template | ✅ Pass    |
+| `test_submit_review`                     | Test review submission flow                                    | Review created & redirect          | ✅ Pass    |
+| `test_home_view_content`                 | Ensure home page displays expected content                     | Contains "Welcome" text            | ✅ Pass    |
+
+### How to Run Tests
+
+Run all tests:
+
+`python test.py`
+
 ### Automated Testing
 
 Automated tests are implemented to ensure that the core features of the application work as expected and to catch any potential bugs. The following modules are tested:
 
+- **Types of Tests:** Model, view, and edge case tests.
+- **Test Framework:** Django's built-in `unittest` framework.
 - **test_models**: Covers the functionality of models such as `Consultant`, `Booking`, `Inquiry`, `Review`, `Portfolio`, and `Certificate`. This includes validation of relationships, constraints, and data integrity.
 
 - **test_views**: Tests the behavior of each view, ensuring that the correct templates are rendered, appropriate data is passed, and CRUD operations are fully functional on the frontend.
@@ -52,18 +87,6 @@ Automated tests are implemented to ensure that the core features of the applicat
 3. **Create Booking View Test**: Ensures the booking form page loads and is functional.
 4. **Review System Tests**: Includes tests for creating, viewing, editing, and deleting reviews, ensuring that users have full control over their feedback.
 5. **Contact Form Test**: Checks that the contact form is accessible and submits successfully.
-
-To run the tests, use the following command:
-
-`python manage.py test`
-
-#### Model Tests
-
-The `test_models` module contains unit tests for the application's models. These tests validate the behavior and integrity of the database models used within the application.
-
-#### View Tests
-
-The `test_views` module contains tests for the application's views. These tests ensure that each view returns the correct response and renders the appropriate templates.
 
 #### Validator Testing
 
@@ -88,6 +111,7 @@ The `test_views` module contains tests for the application's views. These tests 
 |[Bookings](https://validator.w3.org/nu/?doc=https%3A%2F%2Fconsulting-d8d637d4e865.herokuapp.com%2Fbookings%2F)|pass|
 
 |[Update a booking]()|pass|
+
 <div align="center"><img src="static/images/readme/testing/html/update_booking.webp"></div>
 
 |[Submit a review](https://consulting-d8d637d4e865.herokuapp.com/consultants/1/reviews/submit/)|pass|
@@ -139,86 +163,79 @@ The results from Lighthouse testing showed the following scores:
 Homepage
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/home_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/home_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/home_mobile.webp">
+  <img src="static/images/readme/testing/lighthouse/home_mobile.webp">
 
 Portfolio
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/portfolio_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/portfolio_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/portfolio_mobile.webp">
+  <img src="static/images/readme/testing/lighthouse/portfolio_mobile.webp">
 
 Certificates
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/certificate_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/certificate_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/certificate_mobile.webp">
-
+  <img src="static/images/readme/testing/lighthouse/certificate_mobile.webp">
 
 Create a booking
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/create_booking_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/create_booking_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/create_booking_mobile.webp">
-
+  <img src="static/images/readme/testing/lighthouse/create_booking_mobile.webp">
 
 Contact
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/contact_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/contact_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/contact_mobile.webp">
-
+  <img src="static/images/readme/testing/lighthouse/contact_mobile.webp">
 
 About me
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/about_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/about_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/about_mobile.webp">
-
+  <img src="static/images/readme/testing/lighthouse/about_mobile.webp">
 
 Login
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/login_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/login_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/login_mobile.webp">
-
+  <img src="static/images/readme/testing/lighthouse/login_mobile.webp">
 
 Bookings
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/bookings_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/bookings_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/bookings_mobile.webp">
-
+  <img src="static/images/readme/testing/lighthouse/bookings_mobile.webp">
 
 Update a booking
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/admin_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/admin_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/admin_mobile.webp">
-
+  <img src="static/images/readme/testing/lighthouse/admin_mobile.webp">
 
 Submit a review
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/submit_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/submit_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/submit_mobile.webp">
+  <img src="static/images/readme/testing/lighthouse/submit_mobile.webp">
 
 Review
 
 - Desktop
-<img src="static/images/readme/testing/lighthouse/review_desktop.webp">
+  <img src="static/images/readme/testing/lighthouse/review_desktop.webp">
 - Mobile
-<img src="static/images/readme/testing/lighthouse/review_mobile.webp">
+  <img src="static/images/readme/testing/lighthouse/review_mobile.webp">
 
 ## Device Testing
 
@@ -247,112 +264,111 @@ Each User Story was tested to ensure that the corresponding functionality works 
 
 `User Goals`
 
-|Site Owner Goals|How are they archieved|
-|------------|------------------------|
+| Site Owner Goals                    | How are they archieved                                                                                     |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Easy registration and login process | Implemented a user-friendly registration and login system with clear instructions and validation feedback. |
-| Book consultations easily | Provided a streamlined booking system with a simple form and clear availability indications. |
-| View and manage bookings | Implemented a dashboard where users can view, update, and cancel their bookings. |
-| Access consultant profiles | Displayed detailed consultant profiles with bios, specialties, and reviews. |
-| Contact the site owner | Included a contact form for inquiries and support requests. |
-| Provide feedback | Enabled users to submit and view reviews for consultants. |
+| Book consultations easily           | Provided a streamlined booking system with a simple form and clear availability indications.               |
+| View and manage bookings            | Implemented a dashboard where users can view, update, and cancel their bookings.                           |
+| Access consultant profiles          | Displayed detailed consultant profiles with bios, specialties, and reviews.                                |
+| Contact the site owner              | Included a contact form for inquiries and support requests.                                                |
+| Provide feedback                    | Enabled users to submit and view reviews for consultants.                                                  |
 
 `Company Goals`
 
-|Site Owner Goals|How are they archieved|
-|---------------|------------------------|
-| Showcase services and projects | Created portfolio and services sections with detailed descriptions and images. |
-| Capture leads and inquiries | Included a contact form and clear call-to-action buttons throughout the site. |
+| Site Owner Goals                        | How are they archieved                                                                         |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Showcase services and projects          | Created portfolio and services sections with detailed descriptions and images.                 |
+| Capture leads and inquiries             | Included a contact form and clear call-to-action buttons throughout the site.                  |
 | Maintain a professional online presence | Designed the site with a modern, professional aesthetic and ensured all content is up-to-date. |
-| Facilitate user engagement and feedback | Enabled review submissions and displayed user feedback prominently on consultant profiles. |
+| Facilitate user engagement and feedback | Enabled review submissions and displayed user feedback prominently on consultant profiles.     |
 
 #### Feature Testing
 
 `Navigation Bar (Desktop)`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Home Link         | Navigates to the home page            | Clicked the "Home" link in the navigation bar | Navigated to the home page    | Pass ✅     |
-| Portfolio Link    | Navigates to the portfolio page       | Clicked the "Portfolio" link in the navigation bar | Navigated to the portfolio page | Pass  ✅    |
-| Certificates Link | Navigates to the certificates page    | Clicked the "Certificates" link in the navigation bar | Navigated to the certificates page | Pass ✅     |
-| About Me Link     | Navigates to the about me page        | Clicked the "About Me" link in the navigation bar | Navigated to the about me page | Pass ✅     |
-| Contact Link      | Navigates to the contact page         | Clicked the "Contact" link in the navigation bar | Navigated to the contact page | Pass  ✅    |
-| Login/Logout Link | Logs in or out the user               | Clicked the "Login" or "Logout" link in the navigation bar | Logged in or out the user    | Pass  ✅    |
-
+| Home Link | Navigates to the home page | Clicked the "Home" link in the navigation bar | Navigated to the home page | Pass ✅ |
+| Portfolio Link | Navigates to the portfolio page | Clicked the "Portfolio" link in the navigation bar | Navigated to the portfolio page | Pass ✅ |
+| Certificates Link | Navigates to the certificates page | Clicked the "Certificates" link in the navigation bar | Navigated to the certificates page | Pass ✅ |
+| About Me Link | Navigates to the about me page | Clicked the "About Me" link in the navigation bar | Navigated to the about me page | Pass ✅ |
+| Contact Link | Navigates to the contact page | Clicked the "Contact" link in the navigation bar | Navigated to the contact page | Pass ✅ |
+| Login/Logout Link | Logs in or out the user | Clicked the "Login" or "Logout" link in the navigation bar | Logged in or out the user | Pass ✅ |
 
 `Navigation Bar (Mobile)`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Menu Button       | Toggles the navigation menu           | Clicked the menu button                | Navigation menu toggled      | Pass ✅     |
-| Home Link         | Navigates to the home page            | Clicked the "Home" link in the navigation menu | Navigated to the home page    | Pass ✅     |
-| Portfolio Link    | Navigates to the portfolio page       | Clicked the "Portfolio" link in the navigation menu | Navigated to the portfolio page | Pass ✅     |
-| Certificates Link | Navigates to the certificates page    | Clicked the "Certificates" link in the navigation menu | Navigated to the certificates page | Pass ✅     |
-| About Me Link     | Navigates to the about me page        | Clicked the "About Me" link in the navigation menu | Navigated to the about me page | Pass ✅     |
-| Contact Link      | Navigates to the contact page         | Clicked the "Contact" link in the navigation menu | Navigated to the contact page | Pass ✅     |
-| Login/Logout Link | Logs in or out the user               | Clicked the "Login" or "Logout" link in the navigation menu | Logged in or out the user    | Pass ✅     |
+| Menu Button | Toggles the navigation menu | Clicked the menu button | Navigation menu toggled | Pass ✅ |
+| Home Link | Navigates to the home page | Clicked the "Home" link in the navigation menu | Navigated to the home page | Pass ✅ |
+| Portfolio Link | Navigates to the portfolio page | Clicked the "Portfolio" link in the navigation menu | Navigated to the portfolio page | Pass ✅ |
+| Certificates Link | Navigates to the certificates page | Clicked the "Certificates" link in the navigation menu | Navigated to the certificates page | Pass ✅ |
+| About Me Link | Navigates to the about me page | Clicked the "About Me" link in the navigation menu | Navigated to the about me page | Pass ✅ |
+| Contact Link | Navigates to the contact page | Clicked the "Contact" link in the navigation menu | Navigated to the contact page | Pass ✅ |
+| Login/Logout Link | Logs in or out the user | Clicked the "Login" or "Logout" link in the navigation menu | Logged in or out the user | Pass ✅ |
 
 `Hero Section`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Heading             | Displays the main heading            | Viewed the hero section             | Main heading is displayed        | Pass ✅     |
-| Subheading          | Displays the subheading              | Viewed the hero section             | Subheading is displayed          | Pass  ✅    |
-| Call to Action Button | Navigates to the portfolio page    | Clicked the "Portfolio" button      | Navigated to the portfolio page  | Pass  ✅    |
-| Background Image    | Displays the background image correctly | Viewed the hero section          | Background image is displayed correctly | Pass  ✅    |
+| Heading | Displays the main heading | Viewed the hero section | Main heading is displayed | Pass ✅ |
+| Subheading | Displays the subheading | Viewed the hero section | Subheading is displayed | Pass ✅ |
+| Call to Action Button | Navigates to the portfolio page | Clicked the "Portfolio" button | Navigated to the portfolio page | Pass ✅ |
+| Background Image | Displays the background image correctly | Viewed the hero section | Background image is displayed correctly | Pass ✅ |
 
 `Social Media Section`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |-------------------|---------------------------------------|----------------------------------------|------------------------------|-----------|
-| Social Media Icons | Displays social media icons           | Viewed the social media section     | Social media icons are displayed | Pass  ✅    |
-| Links to Social Media Pages | Navigates to the correct social media page | Clicked each social media icon | Navigated to the correct social media page | Pass ✅     |
+| Social Media Icons | Displays social media icons | Viewed the social media section | Social media icons are displayed | Pass ✅ |
+| Links to Social Media Pages | Navigates to the correct social media page | Clicked each social media icon | Navigated to the correct social media page | Pass ✅ |
 
 `Portfolio Section`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Portfolio Items  | Displays all portfolio items with title, description, image, and testimonial | Viewed the portfolio section | All portfolio items displayed correctly | Pass  ✅    |
-| Portfolio Item Details | Displays detailed information of a portfolio item when clicked | Clicked on a portfolio item | Detailed information displayed correctly | Pass  ✅    |
+| Portfolio Items | Displays all portfolio items with title, description, image, and testimonial | Viewed the portfolio section | All portfolio items displayed correctly | Pass ✅ |
+| Portfolio Item Details | Displays detailed information of a portfolio item when clicked | Clicked on a portfolio item | Detailed information displayed correctly | Pass ✅ |
 
 `Certificates Section`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Certificates Items | Displays all certificates with title, description, image, issuing organization, and dates | Viewed the certificates section | All certificate items displayed correctly | Pass ✅     |
-| Certificate Item Details | Displays detailed information of a certificate when clicked | Clicked on a certificate item | Detailed information displayed correctly | Pass  ✅    |
+| Certificates Items | Displays all certificates with title, description, image, issuing organization, and dates | Viewed the certificates section | All certificate items displayed correctly | Pass ✅ |
+| Certificate Item Details | Displays detailed information of a certificate when clicked | Clicked on a certificate item | Detailed information displayed correctly | Pass ✅ |
 
 `About Me Section`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Bio Information  | Displays the bio information correctly    | Viewed the about me section           | Bio information displayed correctly | Pass ✅     |
+| Bio Information | Displays the bio information correctly | Viewed the about me section | Bio information displayed correctly | Pass ✅ |
 
 `Contact Form`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Form Fields      | Displays name, email, and message fields  | Viewed the contact form               | All fields displayed correctly | Pass ✅     |
-| Form Submission  | Submits the form and shows a confirmation message | Filled out and submitted the form | Form submitted and confirmation message displayed | Pass ✅     |
+| Form Fields | Displays name, email, and message fields | Viewed the contact form | All fields displayed correctly | Pass ✅ |
+| Form Submission | Submits the form and shows a confirmation message | Filled out and submitted the form | Form submitted and confirmation message displayed | Pass ✅ |
 
 `User Authentication`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Registration     | Allows new users to register              | Filled out and submitted the registration form | User registered successfully | Pass  ✅    |
-| Login            | Allows users to log in                    | Filled out and submitted the login form | User logged in successfully | Pass ✅     |
-| Logout           | Allows users to log out                   | Clicked the logout link              | User logged out successfully | Pass ✅     |
+| Registration | Allows new users to register | Filled out and submitted the registration form | User registered successfully | Pass ✅ |
+| Login | Allows users to log in | Filled out and submitted the login form | User logged in successfully | Pass ✅ |
+| Logout | Allows users to log out | Clicked the logout link | User logged out successfully | Pass ✅ |
 
 `Admin Dashboard`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Dashboard Access | Allows admin to access the dashboard      | Logged in as admin and accessed the dashboard | Dashboard accessed successfully | Pass  ✅    |
-| Manage Bookings  | Allows admin to manage bookings           | Viewed and edited bookings in the dashboard | Bookings managed successfully | Pass  ✅    |
+| Dashboard Access | Allows admin to access the dashboard | Logged in as admin and accessed the dashboard | Dashboard accessed successfully | Pass ✅ |
+| Manage Bookings | Allows admin to manage bookings | Viewed and edited bookings in the dashboard | Bookings managed successfully | Pass ✅ |
 
 `Booking System`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Create Booking   | Allows users to create a booking          | Filled out and submitted the booking form | Booking created successfully | Pass ✅     |
-| View Bookings    | Allows users to view their bookings       | Accessed the bookings page           | Bookings displayed correctly | Pass ✅     |
-| Update Booking Status | Allows admin to update booking status | Changed the status of a booking     | Booking status updated successfully | Pass ✅     |
+| Create Booking | Allows users to create a booking | Filled out and submitted the booking form | Booking created successfully | Pass ✅ |
+| View Bookings | Allows users to view their bookings | Accessed the bookings page | Bookings displayed correctly | Pass ✅ |
+| Update Booking Status | Allows admin to update booking status | Changed the status of a booking | Booking status updated successfully | Pass ✅ |
 
 `Review System`
 |Feature|Expected Outcome|Testing Performed|Result|Pass/Fail|
 |------------------|-------------------------------------------|--------------------------------------|--------------------------------|-----------|
-| Submit Review    | Allows users to submit reviews            | Filled out and submitted the review form | Review submitted successfully | Pass  ✅    |
-| View Reviews     | Allows users to view reviews              | Accessed the reviews page            | Reviews displayed correctly    | Pass  ✅    |
-| Edit Review      | Allows users to edit their reviews        | Edited an existing review            | Review edited successfully     | Pass  ✅    |
-| Delete Review    | Allows users to delete their reviews      | Deleted an existing review           | Review deleted successfully    | Pass   ✅   |
+| Submit Review | Allows users to submit reviews | Filled out and submitted the review form | Review submitted successfully | Pass ✅ |
+| View Reviews | Allows users to view reviews | Accessed the reviews page | Reviews displayed correctly | Pass ✅ |
+| Edit Review | Allows users to edit their reviews | Edited an existing review | Review edited successfully | Pass ✅ |
+| Delete Review | Allows users to delete their reviews | Deleted an existing review | Review deleted successfully | Pass ✅ |
 
 <br>
 
@@ -390,5 +406,3 @@ Several HTML validation errors were identified, including unclosed tags and elem
 #### Certificate Date Formatting Issue
 
 Certificate expiry dates were not displayed correctly when the expiry date was set to None. I Updated the template logic to handle None values and display "No expiry date" instead of leaving the field blank.
-
-

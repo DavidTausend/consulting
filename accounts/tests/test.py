@@ -76,3 +76,17 @@ class AccountsViewsTest(TestCase):
         response = self.client.get(reverse('accounts:about_me'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'accounts/about_me.html')
+    
+    def test_booking_list_view_unauthorized(self):
+        self.client.logout()
+        response = self.client.get(reverse('accounts:booking_list'))
+        self.assertNotEqual(response.status_code, 200)
+        self.assertRedirects(response, f"{reverse('accounts:login')}?next={reverse('accounts:booking_list')}")
+
+    def test_create_booking_invalid_input(self):
+        response = self.client.post(
+            reverse('accounts:create_booking'),
+            {'consultant': self.consultant.id, 'date': '', 'time': ''}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertFormError(response, 'form', 'date', 'This field is required.')
