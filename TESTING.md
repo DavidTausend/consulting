@@ -64,6 +64,16 @@ This project uses Django's built-in `unittest` framework to validate the functio
 | `test_submit_review`                     | Test review submission flow                                    | Review created & redirect          | ✅ Pass    |
 | `test_home_view_content`                 | Ensure home page displays expected content                     | Contains "Welcome" text            | ✅ Pass    |
 
+
+### Model Tests
+
+| **Test Case** | **Purpose** | **Expected Outcome** | **Status** |
+|--------------|------------|----------------------|------------|
+| `test_consultant_creation` | Ensure consultant model is created correctly | Consultant object created | ✅ Pass |
+| `test_booking_creation` | Verify booking can be created successfully | Booking object created | ✅ Pass |
+| `test_inquiry_creation` | Ensure inquiries can be submitted | Inquiry object created | ✅ Pass |
+| `test_review_creation` | Validate that reviews can be added | Review object created | ✅ Pass |
+
 ### How to Run Tests
 
 Run all tests:
