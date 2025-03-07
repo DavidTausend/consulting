@@ -10,12 +10,16 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path(
         'login/',
-        LoginView.as_view(template_name='accounts/login.html'),
+        LoginView.as_view(
+            template_name='accounts/login.html'
+        ),
         name='login'
     ),
     path(
         'logout/',
-        auth_views.LogoutView.as_view(next_page='accounts:home'),
+        auth_views.LogoutView.as_view(
+            next_page='accounts:home'
+        ),
         name='logout'
     ),
     path('create_booking/', views.create_booking, name='create_booking'),
@@ -68,6 +72,14 @@ urlpatterns = [
     path('certificates/', views.certificate_list, name='certificate_list'),
     path('about_me/', views.about_me, name='about_me'),
     path('', views.home, name='home'),
-    path('delete_review/<int:review_id>/', views.delete_review, name='delete_review'),
-    path('delete_booking/<int:booking_id>/', views.delete_booking, name='delete_booking'),
+    path(
+        'delete_review/<int:review_id>/',
+        views.delete_review,
+        name='delete_review'
+    ),
+    path(
+        'delete_booking/<int:booking_id>/',
+        views.delete_booking,
+        name='delete_booking'
+    ),
 ]

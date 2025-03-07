@@ -45,49 +45,51 @@ def create_booking(request):
             booking = form.save(commit=False)
             booking.client = request.user
             if not Booking.objects.filter(
-                consultant=booking.consultant, date=booking.date, time=booking.time
+                consultant=booking.consultant,
+                date=booking.date,
+                time=booking.time
             ).exists():
                 booking.save()
                 messages.success(request, "Booking created successfully!")
                 return redirect('accounts:booking_list')
-            else:
-                messages.error(request, "This slot is already booked.")
+            messages.error(request, "This slot is already booked.")
     else:
         form = BookingForm()
-    return render(request, 'accounts/create_booking.html', {'form': form, 'consultants': consultants})
+    return render(
+        request,
+        'accounts/create_booking.html',
+        {'form': form, 'consultants': consultants}
+    )
 
 
 # Booking list
 @login_required
 def booking_list(request):
     bookings = Booking.objects.filter(client=request.user)
-    response = render(
+    return render(
         request,
         'accounts/booking_list.html',
         {'bookings': bookings}
     )
-    return response
 
 
 # Consultant Profiles
 def consultant_list(request):
     consultants = Consultant.objects.all()
-    response = render(
+    return render(
         request,
         'accounts/consultant_list.html',
         {'consultants': consultants}
     )
-    return response
 
 
 def consultant_profile(request, consultant_id):
     consultant = get_object_or_404(Consultant, id=consultant_id)
-    response = render(
+    return render(
         request,
         'accounts/consultant_profile.html',
         {'consultant': consultant}
     )
-    return response
 
 
 # Contact Information and Inquiry Form
@@ -96,7 +98,10 @@ def contact(request):
         form = InquiryForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your inquiry has been submitted successfully!")
+            messages.success(
+                request,
+                "Your inquiry has been submitted successfully!"
+            )
             return redirect('accounts:contact_confirmation')
     else:
         form = InquiryForm()
@@ -104,8 +109,7 @@ def contact(request):
 
 
 def contact_confirmation(request):
-    response = render(request, 'accounts/contact_confirmation.html')
-    return response
+    return render(request, 'accounts/contact_confirmation.html')
 
 
 # Search and Filter Requests
@@ -131,7 +135,7 @@ def consultation_list(request):
                 consultant__specialties__icontains=specialty
             )
 
-    response = render(
+    return render(
         request,
         'accounts/consultation_list.html',
         {
@@ -140,19 +144,17 @@ def consultation_list(request):
             'filter_form': filter_form,
         }
     )
-    return response
 
 
 # Admin Views for Bookings Management
 @staff_member_required
 def admin_dashboard(request):
     bookings = Booking.objects.all()
-    response = render(
+    return render(
         request,
         'accounts/admin_dashboard.html',
         {'bookings': bookings}
     )
-    return response
 
 
 @staff_member_required
@@ -165,12 +167,11 @@ def update_booking_status(request, booking_id):
             return redirect('accounts:admin_dashboard')
     else:
         form = BookingStatusForm(instance=booking)
-    response = render(
+    return render(
         request,
         'accounts/update_booking_status.html',
         {'form': form, 'booking': booking}
     )
-    return response
 
 
 # Update booking
@@ -186,7 +187,7 @@ def update_booking(request, booking_id):
     else:
         form = BookingForm(instance=booking)
     return render(request, 'accounts/update_booking.html', {'form': form})
-    
+
 
 # User Reviews and Feedback System
 @login_required
@@ -200,10 +201,17 @@ def submit_review(request, consultant_id):
             review.user = request.user
             review.save()
             messages.success(request, "Review submitted successfully!")
-            return redirect('accounts:view_reviews', consultant_id=consultant.id)
+            return redirect(
+                'accounts:view_reviews',
+                consultant_id=consultant.id
+            )
     else:
         form = ReviewForm()
-    return render(request, 'accounts/submit_review.html', {'form': form, 'consultant': consultant})
+    return render(
+        request,
+        'accounts/submit_review.html',
+        {'form': form, 'consultant': consultant}
+    )
 
 
 @login_required
@@ -214,10 +222,17 @@ def edit_review(request, review_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Review updated successfully!")
-            return redirect('accounts:view_reviews', consultant_id=review.consultant.id)
+            return redirect(
+                'accounts:view_reviews',
+                consultant_id=review.consultant.id
+            )
     else:
         form = ReviewForm(instance=review)
-    return render(request, 'accounts/edit_review.html', {'form': form, 'review': review})
+    return render(
+        request,
+        'accounts/edit_review.html',
+        {'form': form, 'review': review}
+    )
 
 
 @login_required
@@ -236,30 +251,29 @@ def view_reviews(request, consultant_id):
     consultant = get_object_or_404(Consultant, id=consultant_id)
     reviews = Review.objects.filter(consultant=consultant)
 
-    return render(request, 'accounts/view_reviews.html', {
-        'consultant': consultant,
-        'reviews': reviews
-    })
+    return render(
+        request,
+        'accounts/view_reviews.html',
+        {'consultant': consultant, 'reviews': reviews}
+    )
 
 
 def portfolio_list(request):
     portfolios = Portfolio.objects.all()
-    response = render(
+    return render(
         request,
         'accounts/portfolio_list.html',
         {'portfolios': portfolios}
     )
-    return response
 
 
 def certificate_list(request):
     certificates = Certificate.objects.all()
-    response = render(
+    return render(
         request,
         'accounts/certificate_list.html',
         {'certificates': certificates}
     )
-    return response
 
 
 # Deleting Reviews
@@ -267,7 +281,11 @@ def certificate_list(request):
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id, user=request.user)
     review.delete()
-    return redirect('accounts:view_reviews', consultant_id=review.consultant.id)
+    return redirect(
+        'accounts:view_reviews',
+        consultant_id=review.consultant.id
+    )
+
 
 # Deleting Booking
 @login_required
