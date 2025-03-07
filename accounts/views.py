@@ -16,9 +16,6 @@ from django.db import connection
 from django.contrib import messages
 
 
-# Create your views here.
-
-
 # Register to the website
 def register(request):
     if request.method == 'POST':
@@ -301,8 +298,3 @@ def about_me(request):
     }
     response = render(request, 'accounts/about_me.html', about_me_content)
     return response
-
-
-@ratelimit(key='ip', rate='5/m', method='POST', block=True)
-def my_view(request):
-    return render(request, 'home.html')
