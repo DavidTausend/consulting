@@ -29,14 +29,12 @@ def register(request):
     else:
         form = UserCreationForm()
     response = render(request, 'accounts/register.html', {'form': form})
-    connection.close()
     return response
 
 
 # Home page
 def home(request):
     response = render(request, 'accounts/home.html')
-    connection.close()
     return response
 
 
@@ -71,7 +69,6 @@ def booking_list(request):
         'accounts/booking_list.html',
         {'bookings': bookings}
     )
-    connection.close()
     return response
 
 
@@ -83,7 +80,6 @@ def consultant_list(request):
         'accounts/consultant_list.html',
         {'consultants': consultants}
     )
-    connection.close()
     return response
 
 
@@ -94,7 +90,6 @@ def consultant_profile(request, consultant_id):
         'accounts/consultant_profile.html',
         {'consultant': consultant}
     )
-    connection.close()
     return response
 
 
@@ -113,7 +108,6 @@ def contact(request):
 
 def contact_confirmation(request):
     response = render(request, 'accounts/contact_confirmation.html')
-    connection.close()
     return response
 
 
@@ -149,7 +143,6 @@ def consultation_list(request):
             'filter_form': filter_form,
         }
     )
-    connection.close()
     return response
 
 
@@ -162,7 +155,6 @@ def admin_dashboard(request):
         'accounts/admin_dashboard.html',
         {'bookings': bookings}
     )
-    connection.close()
     return response
 
 
@@ -173,7 +165,6 @@ def update_booking_status(request, booking_id):
         form = BookingStatusForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            connection.close()
             return redirect('accounts:admin_dashboard')
     else:
         form = BookingStatusForm(instance=booking)
@@ -182,7 +173,6 @@ def update_booking_status(request, booking_id):
         'accounts/update_booking_status.html',
         {'form': form, 'booking': booking}
     )
-    connection.close()
     return response
 
 
@@ -262,7 +252,6 @@ def portfolio_list(request):
         'accounts/portfolio_list.html',
         {'portfolios': portfolios}
     )
-    connection.close()
     return response
 
 
@@ -273,7 +262,6 @@ def certificate_list(request):
         'accounts/certificate_list.html',
         {'certificates': certificates}
     )
-    connection.close()
     return response
 
 
@@ -312,15 +300,9 @@ def about_me(request):
         )
     }
     response = render(request, 'accounts/about_me.html', about_me_content)
-    connection.close()
     return response
 
 
 @ratelimit(key='ip', rate='5/m', method='POST', block=True)
 def my_view(request):
-    pass
-
-
-def my_view(request):
-    connection.close()
     return render(request, 'home.html')
