@@ -13,6 +13,7 @@ from .forms import (
 from django.contrib.admin.views.decorators import staff_member_required
 from django_ratelimit.decorators import ratelimit
 from django.db import connection
+from django.contrib import messages
 
 
 # Create your views here.
@@ -49,24 +50,16 @@ def create_booking(request):
             booking = form.save(commit=False)
             booking.client = request.user
             if not Booking.objects.filter(
-                consultant=booking.consultant,
-                date=booking.date,
-                time=booking.time
+                consultant=booking.consultant, date=booking.date, time=booking.time
             ).exists():
                 booking.save()
-                connection.close()
+                messages.success(request, "Booking created successfully!")
                 return redirect('accounts:booking_list')
             else:
-                form.add_error(None, 'This slot is already booked.')
+                messages.error(request, "This slot is already booked.")
     else:
         form = BookingForm()
-    response = render(
-        request,
-        'accounts/create_booking.html',
-        {'form': form, 'consultants': consultants}
-    )
-    connection.close()
-    return response
+    return render(request, 'accounts/create_booking.html', {'form': form, 'consultants': consultants})
 
 
 # Booking list
@@ -111,17 +104,11 @@ def contact(request):
         form = InquiryForm(request.POST)
         if form.is_valid():
             form.save()
-            connection.close()
+            messages.success(request, "Your inquiry has been submitted successfully!")
             return redirect('accounts:contact_confirmation')
     else:
         form = InquiryForm()
-    response = render(
-        request,
-        'accounts/contact.html',
-        {'form': form}
-    )
-    connection.close()
-    return response
+    return render(request, 'accounts/contact.html', {'form': form})
 
 
 def contact_confirmation(request):
@@ -207,6 +194,7 @@ def update_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
+            messages.success(request, "Booking updated successfully!")
             return redirect('accounts:booking_list')
     else:
         form = BookingForm(instance=booking)
@@ -224,56 +212,34 @@ def submit_review(request, consultant_id):
             review.consultant = consultant
             review.user = request.user
             review.save()
-            connection.close()
-            return redirect(
-                'accounts:view_reviews', consultant_id=consultant.id
-            )
+            messages.success(request, "Review submitted successfully!")
+            return redirect('accounts:view_reviews', consultant_id=consultant.id)
     else:
         form = ReviewForm()
-    response = render(
-        request,
-        'accounts/submit_review.html',
-        {'form': form, 'consultant': consultant}
-    )
-    connection.close()
-    return response
+    return render(request, 'accounts/submit_review.html', {'form': form, 'consultant': consultant})
 
 
 @login_required
 def edit_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id)
-    if request.user != review.user:
-        connection.close()
-        return redirect(
-            'accounts:view_reviews', consultant_id=review.consultant.id
-        )
+    review = get_object_or_404(Review, id=review_id, user=request.user)
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            connection.close()
-            return redirect(
-                'accounts:view_reviews', consultant_id=review.consultant.id
-            )
+            messages.success(request, "Review updated successfully!")
+            return redirect('accounts:view_reviews', consultant_id=review.consultant.id)
     else:
         form = ReviewForm(instance=review)
-    response = render(
-        request,
-        'accounts/edit_review.html',
-        {'form': form, 'review': review}
-    )
-    connection.close()
-    return response
+    return render(request, 'accounts/edit_review.html', {'form': form, 'review': review})
 
 
 @login_required
 def delete_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id)
+    review = get_object_or_404(Review, id=review_id, user=request.user)
     consultant_id = review.consultant.id
-    if request.user == review.user:
-        review.delete()
-    connection.close()
-    return redirect('accounts:consultant_profile', consultant_id=consultant_id)
+    review.delete()
+    messages.success(request, "Review deleted successfully!")
+    return redirect('accounts:view_reviews', consultant_id=consultant_id)
 
 
 def view_reviews(request, consultant_id):
@@ -323,6 +289,7 @@ def delete_review(request, review_id):
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, client=request.user)
     booking.delete()
+    messages.success(request, "Booking deleted successfully!")
     return redirect('accounts:booking_list')
 
 
