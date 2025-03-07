@@ -277,15 +277,16 @@ def delete_review(request, review_id):
 
 
 def view_reviews(request, consultant_id):
+    """
+    Retrieves all reviews for a specific consultant and displays them.
+    """
     consultant = get_object_or_404(Consultant, id=consultant_id)
     reviews = Review.objects.filter(consultant=consultant)
-    response = render(
-        request,
-        'accounts/view_reviews.html',
-        {'reviews': reviews, 'consultant': consultant}
-    )
-    connection.close()
-    return response
+
+    return render(request, 'accounts/view_reviews.html', {
+        'consultant': consultant,
+        'reviews': reviews
+    })
 
 
 def portfolio_list(request):
