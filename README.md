@@ -290,7 +290,7 @@ The social media section includes icons that link to various social media profil
 
 The portfolio section showcases a collection of projects with detailed descriptions and client testimonials, demonstrating expertise and past work.
 
-<div align="center"><img src="static/images/readme/features/porfolio.webp" alt="Porfolio Section"></div>
+<div align="center"><img src="static/images/readme/features/portfolio.webp" alt="Portfolio Section"></div>
 
 ### Certificates Section
 
