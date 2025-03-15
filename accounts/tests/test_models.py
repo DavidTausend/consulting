@@ -27,9 +27,14 @@ class ConsultantModelTest(TestCase):
 
 class BookingModelTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="testuser", password="password")
+        self.user = User.objects.create_user(
+            username="testuser", password="password"
+        )
         self.consultant = Consultant.objects.create(
-            name="Jane Doe", title="Data Scientist", bio="ML Specialist", specialties="AI, ML, Data Science"
+            name="Jane Doe",
+            title="Data Scientist",
+            bio="ML Specialist",
+            specialties="AI, ML, Data Science",
         )
         self.booking = Booking.objects.create(
             user=self.user,
@@ -41,7 +46,11 @@ class BookingModelTest(TestCase):
 
     def test_booking_creation(self):
         self.assertEqual(self.booking.user.username, "testuser")
-        self.assertEqual(str(self.booking), f"{self.user.username} - {self.consultant.name} ({self.booking.date})")
+        self.assertEqual(
+            str(self.booking),
+            f"{self.user.username} - {self.consultant.name} "
+            f"({self.booking.date})",
+        )
 
 
 class InquiryModelTest(TestCase):
@@ -59,9 +68,14 @@ class InquiryModelTest(TestCase):
 
 class ReviewModelTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="reviewer", password="password123")
+        self.user = User.objects.create_user(
+            username="reviewer", password="password123"
+        )
         self.consultant = Consultant.objects.create(
-            name="Alex Smith", title="IT Specialist", bio="Experienced IT consultant", specialties="Networking, Security"
+            name="Alex Smith",
+            title="IT Specialist",
+            bio="Experienced IT consultant",
+            specialties="Networking, Security",
         )
         self.review = Review.objects.create(
             user=self.user,
@@ -72,18 +86,27 @@ class ReviewModelTest(TestCase):
 
     def test_review_creation(self):
         self.assertEqual(self.review.rating, 5)
-        self.assertEqual(str(self.review), f"Review by {self.user.username} for {self.consultant.name}")
+        self.assertEqual(
+            str(self.review),
+            f"Review by {self.user.username} for {self.consultant.name}",
+        )
 
 
 class PortfolioModelTest(TestCase):
     def setUp(self):
         self.consultant = Consultant.objects.create(
-            name="Michael Brown", title="AI Engineer", bio="Deep Learning Enthusiast", specialties="NLP, Vision"
+            name="Michael Brown",
+            title="AI Engineer",
+            bio="Deep Learning Enthusiast",
+            specialties="NLP, Vision",
         )
         self.portfolio = Portfolio.objects.create(
             consultant=self.consultant,
             title="AI Chatbot",
-            description="Developed an AI-powered chatbot for customer support.",
+            description=(
+                "Developed an AI-powered chatbot "
+                "for customer support."
+            ),
         )
 
     def test_portfolio_creation(self):
@@ -94,7 +117,10 @@ class PortfolioModelTest(TestCase):
 class CertificateModelTest(TestCase):
     def setUp(self):
         self.consultant = Consultant.objects.create(
-            name="Sarah Wilson", title="Cybersecurity Expert", bio="Expert in penetration testing", specialties="Security, Compliance"
+            name="Sarah Wilson",
+            title="Cybersecurity Expert",
+            bio="Expert in penetration testing",
+            specialties="Security, Compliance",
         )
         self.certificate = Certificate.objects.create(
             consultant=self.consultant,
@@ -104,9 +130,10 @@ class CertificateModelTest(TestCase):
         )
 
     def test_certificate_creation(self):
-        self.assertEqual(self.certificate.title, "Certified Ethical Hacker")
-        self.assertEqual(str(self.certificate), "Certified Ethical Hacker - EC-Council")
-
-
-# Run tests using:
-# python manage.py test accounts
+        self.assertEqual(
+            self.certificate.title, "Certified Ethical Hacker"
+        )
+        self.assertEqual(
+            str(self.certificate),
+            "Certified Ethical Hacker - EC-Council",
+        )

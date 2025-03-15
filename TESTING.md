@@ -78,7 +78,7 @@ This project uses Django's built-in `unittest` framework to validate the functio
 
 Run all tests:
 
-`python test.py`
+`python manage.py test`
 
 ### Automated Testing
 
