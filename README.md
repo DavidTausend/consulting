@@ -20,6 +20,9 @@ Consulting is a web application designed to showcase a collection of projects th
 
 - [Introduction](#introduction)
 - [Table of Contents](#table-of-contents)
+- [Installation Guide](#installation-guide)
+  * [Prerequisites](#prerequisites)
+  * [Setup Instructions](#setup-instructions)
 - [User Experience (UX)](#user-experience--ux-)
   * [User Stories](#user-stories)
     + [User goals](#user-goals)
@@ -69,6 +72,7 @@ Consulting is a web application designed to showcase a collection of projects th
     + [How to Fork](#how-to-fork)
     + [How to Clone](#how-to-clone)
     + [Committing and Pushing Changes](#committing-and-pushing-changes)
+- [Future Enhancements](#future-enhancements)
 - [Testing](#testing)
 - [Credits](#credits)
   * [Content](#content)
@@ -83,6 +87,52 @@ Consulting is a web application designed to showcase a collection of projects th
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
 <br>
+
+## Installation Guide
+
+### Prerequisites
+
+- Python 3.10+
+
+- Git
+
+- Virtual environment (venv)
+
+- PostgreSQL (for production deployment)
+
+- Heroku CLI (for cloud deployment)
+
+### Setup Instructions
+
+1. Clone the repository:
+
+`git clone https://github.com/DavidTausend/consulting.git`
+`cd consulting`
+
+2. Create a virtual environment:
+
+`python -m venv venv`
+`source venv/bin/activate`
+
+3. Install dependencies:
+
+`pip install -r requirements.txt`
+
+4. Set up environment variables:
+
+`cp .env.example .env`
+
+5. Apply database migrations:
+
+`python manage.py migrate`
+
+6. Create a superuser:
+
+`python manage.py createsuperuser`
+
+7. Start the development server:
+
+`python manage.py runserver`
 
 ## User Experience (UX)
 
@@ -111,7 +161,7 @@ The primary font used throughout the website is Arial, sans-serif, providing a c
 
 ### Color Scheme
 
-The color scheme of the project is inspired by a sleek, modern design. The primary color is black (#000) which is used for the sidebar background and text, creating a strong contrast. The secondary color is white (#fff) for the main content background, ensuring readability. An accent color of bright blue (#0008fe) is used for buttons and hover effects, adding a pop of color and enhancing the user interface. Additional colors include gray (#adb5bd) for secondary text and light gray (#f9f9f9) for sections like the contact form background.
+The color scheme of the project is inspired by a sleek, modern design. The primary color is black (#000) which is used for the sidebar background and text, creating a strong contrast. The secondary color is white (#fff) for the main content background, ensuring readability. An accent color of bright blue (#0008fe) is used for buttons and hover effects, adding a pop of color and enhancing the user interface.
 
 ### Wireframes
 
@@ -459,6 +509,18 @@ After making changes to your local copy, you can commit and push them to GitHub:
 3. Use `git add .` to stage all changes for commit, or `git add <filename>` to stage specific files.
 4. Use `git commit -m "Your commit message here"` to commit your changes with a descriptive message.
 5. Use `git push origin main` to push your changes to the main branch on GitHub.
+
+## Future Enhancements
+
+- AI-based Search System: Implement AI-powered search for easier navigation.
+
+- API Integration: Allow third-party applications to interact with the consulting platform.
+
+- Dark Mode Support: Implement a toggle for light and dark themes.
+
+Calendar Integration: Sync bookings with Google Calendar.
+
+Multi-language Support: Expand usability to global audiences.
 
 ## Testing
 
