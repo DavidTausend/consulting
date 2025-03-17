@@ -88,31 +88,10 @@ Consulting is a web application designed to showcase a collection of projects th
 
 <br>
 
-## Installation Guide
-
-### Prerequisites
-
-- Python 3.10+
-
-- Git
-
-- Virtual environment (venv)
-
-- PostgreSQL (for production deployment)
-
-- Heroku CLI (for cloud deployment)
-
-### Setup Instructions
-
-1. Clone the repository:
-
-`git clone https://github.com/DavidTausend/consulting.git`
-`cd consulting`
 
 2. Create a virtual environment:
 
-`python -m venv venv`
-`source venv/bin/activate`
+
 
 3. Install dependencies:
 
@@ -435,13 +414,35 @@ The review system enables users to submit, view, edit, and delete reviews for co
 
 ### Deployment
 
+### Prerequisites
+
+- Python 3.10+
+
+- Git
+
+- Virtual environment (venv)
+
+- PostgreSQL (for production deployment)
+
+- Heroku CLI (for cloud deployment)
+
 ### Local Development
 
 1. Clone the repository from GitHub by clicking the "Code" button and copying the URL.
 2. Open your preferred IDE and open a terminal session in the directory you want to clone the repository to.
 3. Type git clone followed by the URL you copied in step 1 and press enter.
+
+`git clone https://github.com/DavidTausend/consulting.git`
+`cd consulting`
+
 4. (Optional): Set up a virtual environment in the project folder using python3 -m venv [virtual_environment name]
+
+`python -m venv venv`
+
 5. (Optional): To activate the virtual environment on Windows run myvenv\Scripts\activate and on macOS and Linux, run source myvenv/bin/activate
+
+`source venv/bin/activate`
+
 6. Install the required dependencies by typing pip install -r requirements.txt in the terminal.
 - Note: The project is setup to use environment variables. You will need to set these up in your local environment. See Environment Variables for more information.
 7. Connect your database of choice and run the migrations by typing python manage.py migrate in the terminal.
