@@ -20,9 +20,6 @@ Consulting is a web application designed to showcase a collection of projects th
 
 - [Introduction](#introduction)
 - [Table of Contents](#table-of-contents)
-- [Installation Guide](#installation-guide)
-  * [Prerequisites](#prerequisites)
-  * [Setup Instructions](#setup-instructions)
 - [User Experience (UX)](#user-experience--ux-)
   * [User Stories](#user-stories)
     + [User goals](#user-goals)
@@ -66,6 +63,7 @@ Consulting is a web application designed to showcase a collection of projects th
   * [Applications, Plugins & Tools Used](#applications--plugins---tools-used)
 - [Deployment & Local Development](#deployment---local-development)
   * [Deployment](#deployment)
+  * [Prerequisites](#prerequisites)
   * [Local Development](#local-development)
     + [Heroku Deployment](#heroku-deployment)
     + [Environment Variables](#environment-variables)
@@ -87,31 +85,6 @@ Consulting is a web application designed to showcase a collection of projects th
 [Generate TOC](https://ecotrust-canada.github.io/markdown-toc/)
 
 <br>
-
-
-2. Create a virtual environment:
-
-
-
-3. Install dependencies:
-
-`pip install -r requirements.txt`
-
-4. Set up environment variables:
-
-`cp .env.example .env`
-
-5. Apply database migrations:
-
-`python manage.py migrate`
-
-6. Create a superuser:
-
-`python manage.py createsuperuser`
-
-7. Start the development server:
-
-`python manage.py runserver`
 
 ## User Experience (UX)
 
@@ -445,10 +418,22 @@ The review system enables users to submit, view, edit, and delete reviews for co
 
 6. Install the required dependencies by typing pip install -r requirements.txt in the terminal.
 - Note: The project is setup to use environment variables. You will need to set these up in your local environment. See Environment Variables for more information.
+
+`pip install -r requirements.txt`
+`cp .env.example .env`
+
 7. Connect your database of choice and run the migrations by typing python manage.py migrate in the terminal.
+
+`python manage.py migrate`
+
 8. Create a superuser by typing python manage.py createsuperuser in the terminal and following the prompts.
+
+`python manage.py createsuperuser`
+
 9. (Optional):: Fixtures for Users and also the individual blog posts are included in the project in the fixtures directory. To add the pre-populated data to the database, run python manage.py loaddata fixtures/[fixture_name].json.
 10. Run the app by typing python manage.py runserver in the terminal and opening the URL in your browser.
+
+`python manage.py runserver`
 
 #### Heroku Deployment
 
